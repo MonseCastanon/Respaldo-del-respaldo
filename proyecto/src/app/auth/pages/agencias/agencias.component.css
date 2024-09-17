@@ -1,0 +1,53 @@
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Distribuye el espacio entre las tarjetas */
+  margin: 0 30px; /* Margen de 30px a los lados */
+}
+
+.grid .col-12 {
+  flex: 1 1 calc(33.333% - 20px); /* Calcula el ancho de cada tarjeta considerando el margen */
+  margin-bottom: 20px; /* Espacio inferior entre las filas de tarjetas */
+  box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el ancho */
+}
+
+h1{
+  margin-left: 25px;
+}
+
+.paquete-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Asegura que la tarjeta ocupe todo el espacio disponible */
+}
+
+mat-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+mat-card-image {
+  object-fit: cover; /* Mantiene la proporción de la imagen sin deformarla */
+  height: 200px; /* Ajusta según sea necesario */
+  width: 100%;
+}
+
+mat-card-content {
+  flex: 1;
+}
+
+/* Ajusta el ancho para pantallas más pequeñas si es necesario */
+@media (max-width: 768px) {
+  .grid .col-12 {
+    flex: 1 1 calc(50% - 20px); /* 2 tarjetas por fila */
+  }
+}
+
+@media (max-width: 480px) {
+  .grid .col-12 {
+    flex: 1 1 100%; /* 1 tarjeta por fila */
+  }
+}
+

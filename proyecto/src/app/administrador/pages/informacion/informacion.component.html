@@ -1,0 +1,46 @@
+<ng-template #divLoading>
+  <mat-grid-list cols="1">
+    <mat-grid-tile>
+      <mat-spinner></mat-spinner>
+    </mat-grid-tile>
+  </mat-grid-list>
+</ng-template>
+
+<div *ngIf="hotel; else divLoading" class="grid p-2">
+    <mat-card class="col-12 sm:col-6">
+        <mat-card-header>
+          <mat-card-title>{{ hotel.nombre }}</mat-card-title>
+          <mat-card-subtitle> {{hotel.categoria }}</mat-card-subtitle>
+        </mat-card-header>
+
+       <img [src]="hotel | hotelImage" [alt]="hotel.nombre" mat-card-image />
+
+    </mat-card>
+    <mat-card class="col-12 sm:col-6">
+          <mat-card-header>
+            <mat-card-title>Información</mat-card-title>
+            <mat-card-subtitle>{{hotel.categoria}}</mat-card-subtitle>
+          </mat-card-header>
+
+          <mat-card-content>
+            <mat-list>
+                <p><b>Tipología</b></p><div class="texto">{{hotel.tipologia}}</div><br>
+                <p><b>Localización</b></p><div class="texto">{{hotel.localizacion}}</div><br>
+                <p><b>Descripción</b></p><div class="texto">{{hotel.descripcion}}</div><br>
+                <p><b>Accesibilidad</b></p><div class="texto">{{hotel.accesibilidad}}</div><br>
+                <p><b>Número de habitaciones</b></p><div class="texto">{{hotel.num_habitaciones}}</div><br>
+                <p><b>Actividades</b></p><div class="texto">{{hotel.actividades}}</div><br>
+                <p><b>Servicios</b></p><div class="texto">{{hotel.servicios}}</div><br>
+                <p><b>Número de visitantes ideal</b></p><div class="texto">{{hotel.num_visitante_ideal}}</div><br>
+                <p><b>Fechas de visita ideal</b></p><div class="texto">{{hotel.fecha_ideal_visita}}</div><br>
+                <p><b>Segmento de mercado potencial</b></p><div class="texto">{{hotel.segmento_mercado_potencial}}</div><br>
+                <p><b>Costo</b></p><div class="texto">{{hotel.costo}}</div><br>
+                <p><b>Contacto</b></p><div class="texto">{{hotel.contacto}}</div>
+            </mat-list>
+
+            <button mat-flat-button color="primary" (click)="goBack()">Regresar</button>
+
+          </mat-card-content>
+    </mat-card>
+</div>
+

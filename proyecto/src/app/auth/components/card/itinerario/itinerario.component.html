@@ -1,0 +1,32 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title> {{ itinerario.nombre }} </mat-card-title>
+  </mat-card-header>
+<!--
+  <img mat-card-image [src]="itinerario | itinerarioImage" [alt]="itinerario.nombre"> -->
+
+
+  <mat-card-content class="mt-2">
+    <p>
+      <strong>Nombre</strong> {{ itinerario.nombre }}
+      <br>
+      <mat-chip-listbox>
+        <mat-chip *ngFor="let name of
+        itinerario.nombre.split(',') | slice:0:3">
+        {{ name }}
+        </mat-chip>
+      </mat-chip-listbox>
+    </p>
+
+  </mat-card-content>
+
+  <mat-divider></mat-divider>
+  <mat-card-actions>
+    <button mat-button
+    mat-raised
+    [routerLink]="['/auth/itinerarios',itinerario.id]">
+    <mat-icon>more_horiz</mat-icon>
+    Más
+    </button>
+  </mat-card-actions>
+</mat-card>

@@ -1,0 +1,42 @@
+<ng-template #divLoading>
+  <mat-grid-list cols="1">
+    <mat-grid-tile>
+      <mat-spinner></mat-spinner>
+    </mat-grid-tile>
+  </mat-grid-list>
+</ng-template>
+
+<div *ngIf="restaurante; else divLoading" class="grid p-2">
+    <mat-card class="col-12 sm:col-6">
+        <mat-card-header>
+          <mat-card-title>{{ restaurante.nombre }}</mat-card-title>
+          <mat-card-subtitle> {{restaurante.categoria }}</mat-card-subtitle>
+        </mat-card-header>
+
+       <img [src]="restaurante | restauranteImage" [alt]="restaurante.nombre" mat-card-image />
+
+    </mat-card>
+    <mat-card class="col-12 sm:col-6">
+          <mat-card-header>
+            <mat-card-title>Información</mat-card-title>
+            <mat-card-subtitle>{{restaurante.categoria}}</mat-card-subtitle>
+          </mat-card-header>
+
+          <mat-card-content>
+            <mat-list>
+              <p><b>Tipología</b></p><div class="texto">{{restaurante.tipologia}}</div><br>
+              <p><b>Localización</b></p><div class="texto">{{restaurante.localizacion}}</div><br>
+              <p><b>Descripción</b></p><div class="texto">{{restaurante.descripcion}}</div><br>
+              <p><b>Accesibilidad</b></p><div class="texto">{{restaurante.accesibilidad}}</div><br>
+              <p><b>Infraestructura</b></p><div class="texto">{{restaurante.infraestructura}}</div><br>
+              <p><b>Servicios</b></p><div class="texto">{{restaurante.servicios}}</div><br>
+              <p><b>Costo</b></p><div class="texto">{{restaurante.costo}}</div><br>
+              <p><b>Contacto</b></p><div class="texto">{{restaurante.contacto}}</div>
+            </mat-list>
+
+            <button mat-flat-button color="primary" (click)="goBack()">Regresar</button>
+
+          </mat-card-content>
+    </mat-card>
+</div>
+

@@ -1,0 +1,19 @@
+img{
+  width: 100%;
+  height: auto;
+  position: fixed;
+  margin-top: -100px;
+}
+
+button {
+  position: fixed;
+  bottom: 50px;
+  right: 20px;
+  background-color: #ea7108;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 10;
+}

@@ -1,0 +1,97 @@
+<h1>
+  {{ currentExperiencia.id ? 'Editar' : 'Añadir' }}
+  Experiencia
+  <small *ngIf="currentExperiencia.id">{{ currentExperiencia.nombre }}</small>
+</h1>
+
+<mat-divider class="mb-2"></mat-divider>
+
+<div class="grid">
+  <div class="col-12 sm:col-6">
+    <mat-card>
+      <mat-card-content>
+        <form class="grid" [formGroup]="experienciaForm" (ngSubmit)="onSubmit()">
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Nombre</mat-label>
+            <input
+              matInput
+              type="text
+              required"
+              formControlName="nombre"/>
+          </mat-form-field>
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Accesibilidad</mat-label>
+            <input
+              matInput
+              type="text
+              required"
+              formControlName="accesibilidad"/>
+          </mat-form-field>
+          <mat-form-field class="col-12">
+            <mat-label>Descripcion</mat-label>
+            <input
+              matInput
+              type="text
+              required"
+              formControlName="descripcion" />
+          </mat-form-field>
+          <mat-form-field class="col-12">
+            <mat-label>Servicio</mat-label>
+            <input
+              matInput
+              type="text
+              required"
+              formControlName="servicio"/>
+          </mat-form-field>
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Costo</mat-label>
+            <input
+              matInput
+              type="text
+              required"
+              formControlName="costo"/>
+          </mat-form-field>
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Contacto</mat-label>
+            <input
+              matInput
+              type="text
+              required"
+              formControlName="contacto"/>
+          </mat-form-field>
+
+          <mat-form-field class="col-12">
+            <mat-label>Alternative Image</mat-label>
+            <input
+              matInput
+              type="text"
+              formControlName="alt_img" />
+          </mat-form-field>
+        </form>
+        <div class="flex justify-content-between">
+          <button
+            *ngIf="currentExperiencia.id"
+            (click) = "onDeleteExperiencia()"
+            mat-flat-button
+          >
+            Borrar
+          </button>
+          <button
+            mat-fab extended
+            (click)="onSubmit()"
+            >
+              <mat-icon>save</mat-icon>
+              Guardar
+          </button>
+          <button mat-flat-button color="primary" (click)="goBack()">Regresar</button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="col-12 sm:col-6">
+    <mat-card>
+      <img mat-card-image [src]="currentExperiencia | expImage" alt="imagen del experiencia">
+    </mat-card>
+  </div>
+
+</div>

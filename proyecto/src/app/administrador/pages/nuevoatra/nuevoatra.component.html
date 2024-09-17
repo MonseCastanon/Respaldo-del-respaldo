@@ -1,0 +1,145 @@
+<h1>
+  {{ currentAtractivo.id ? 'Editar' : 'Añadir' }}
+  Atractivo
+  <small *ngIf="currentAtractivo.id">{{ currentAtractivo.nombre }}</small>
+</h1>
+
+<mat-divider class="mb-2"></mat-divider>
+
+<div class="grid">
+  <div class="col-12 sm:col-6">
+    <mat-card>
+      <mat-card-content>
+        <form class="grid" [formGroup]="atractivoForm" (ngSubmit)="onSubmit()">
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Nombre</mat-label>
+            <input
+              matInput
+              type="text
+              required"
+              formControlName="nombre"/>
+          </mat-form-field>
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Categoria</mat-label>
+            <input
+              matInput
+              type="text
+              required"
+              formControlName="categoria" />
+          </mat-form-field>
+          <mat-form-field class="col-12 sm:col-6" >
+            <mat-label>Tipologia</mat-label>
+            <input
+              matInput
+              type="text
+              required"
+              formControlName="tipologia"/>
+          </mat-form-field>
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Localizacion</mat-label>
+            <input
+              matInput
+              type="text
+              required"
+              formControlName="localizacion"/>
+          </mat-form-field>
+          <mat-form-field class="col-12">
+            <mat-label>Descripcion</mat-label>
+            <input
+              matInput
+              type="text
+              required"
+              formControlName="descripcion"/>
+          </mat-form-field>
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Accesibilidad</mat-label>
+            <input
+              matInput
+              type="text
+              required"
+              formControlName="accesibilidad"/>
+          </mat-form-field>
+          <mat-form-field class="col-12 sm:col-6" >
+            <mat-label>Actividades</mat-label>
+            <input
+              matInput
+              type="text
+              required"
+              formControlName="actividades"/>
+          </mat-form-field>
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Numero de visitantes ideal</mat-label>
+            <input
+              matInput
+              type="text
+              required"
+              formControlName="num_visitante_ideal"/>
+          </mat-form-field>
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Fecha ideal de visita</mat-label>
+            <input
+              matInput
+              type="text
+              required"
+              formControlName="fecha_ideal_visita"/>
+          </mat-form-field>
+          <mat-form-field class="col-12">
+            <mat-label>Segmento de mercado potencial</mat-label>
+            <input
+              matInput
+              type="text
+              required"
+              formControlName="segmento_mercado_potencial"/>
+          </mat-form-field>
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Costo</mat-label>
+            <input
+              matInput
+              type="text
+              required"
+              formControlName="costo"/>
+          </mat-form-field>
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Servicio</mat-label>
+            <input
+              matInput
+              type="text
+              required"
+              formControlName="servicio"/>
+          </mat-form-field>
+
+          <mat-form-field class="col-12">
+            <mat-label>Alternative Image</mat-label>
+            <input
+              matInput
+              type="text"
+              formControlName="alt_img" />
+          </mat-form-field>
+        </form>
+        <div class="flex justify-content-between">
+          <button
+            *ngIf="currentAtractivo.id"
+            (click) = "onDeleteAtractivo()"
+            mat-flat-button
+          >
+            Borrar
+          </button>
+          <button
+            mat-fab extended
+            (click)="onSubmit()"
+            >
+              <mat-icon>save</mat-icon>
+              Guardar
+          </button>
+          <button mat-flat-button color="primary" (click)="goBack()">Regresar</button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="col-12 sm:col-6">
+    <mat-card>
+      <img mat-card-image [src]="currentAtractivo | atractivoImage" alt="imagen del atractivo">
+    </mat-card>
+  </div>
+
+</div>

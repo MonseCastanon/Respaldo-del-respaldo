@@ -1,0 +1,44 @@
+<ng-template #divLoading>
+  <mat-grid-list cols="1">
+    <mat-grid-tile>
+      <mat-spinner></mat-spinner>
+    </mat-grid-tile>
+  </mat-grid-list>
+</ng-template>
+
+<div *ngIf="atractivo; else divLoading" class="grid p-2">
+
+    <mat-card class="col-12 sm:col-6">
+        <mat-card-header>
+          <mat-card-title>{{ atractivo.nombre }}</mat-card-title>
+          <mat-card-subtitle> {{atractivo.categoria }}</mat-card-subtitle>
+        </mat-card-header>
+
+       <img [src]="atractivo | atractivoImage" [alt]="atractivo.nombre" mat-card-image />
+
+    </mat-card>
+    <mat-card class="col-12 sm:col-6">
+          <mat-card-header>
+            <mat-card-title>Información</mat-card-title>
+            <mat-card-subtitle>{{atractivo.nombre}}</mat-card-subtitle>
+          </mat-card-header>
+
+          <mat-card-content>
+            <mat-list>
+              <p><b>Tipología</b></p><div class="texto">{{atractivo.tipologia}}</div><br>
+              <p><b>Localización</b></p><div class="texto">{{atractivo.localizacion}}</div><br>
+              <p><b>Descripción</b></p><div class="texto">{{atractivo.descripcion}}</div><br>
+              <p><b>Accesibilidad</b></p><div class="texto">{{atractivo.accesibilidad}}</div><br>
+              <p><b>Actividades</b></p><div class="texto">{{atractivo.actividades}}</div><br>
+              <p><b>Número de visitantes ideal</b></p><div class="texto">{{atractivo.num_visitante_ideal}}</div><br>
+              <p><b>Fecha ideal de visita</b></p><div class="texto">{{atractivo.fecha_ideal_visita}}</div><br>
+              <p><b>Segmento de mercado potencial</b></p><div class="texto">{{atractivo.segmento_mercado_potencial}}</div><br>
+              <p><b>Servicio</b></p><div class="texto">{{atractivo.servicio}}</div><br>
+              <p><b>Costo</b></p><div class="texto">{{atractivo.costo}}</div>
+            </mat-list>
+
+            <button mat-flat-button color="primary" (click)="goBack()">Regresar</button>
+
+          </mat-card-content>
+    </mat-card>
+</div>

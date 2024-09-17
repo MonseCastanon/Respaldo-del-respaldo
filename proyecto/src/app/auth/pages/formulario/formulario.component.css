@@ -1,0 +1,189 @@
+/* Estilo general del formulario */
+.container {
+  max-width: 800px; /* Establece el ancho máximo del contenedor principal */
+  margin: 0 auto; /* Centra el contenedor horizontalmente en la página */
+  background-color: #ffffff;
+  border-radius: 15px;
+  padding: 20px;
+  font-family: 'Times New Roman', Times, serif; /* Fuente más formal */
+  color: #333333;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  color: #333333;
+  font-size: 2.5em; /* Tamaño del texto ajustado para mayor formalidad */
+  font-family: 'Georgia', serif; /* Fuente más formal para el encabezado */
+  text-shadow: 1px 1px #aaaaaa;
+  margin-bottom: 20px; /* Espacio adicional debajo del título */
+}
+
+h2 {
+  font-size: 2em; /* Tamaño del texto para subtítulos */
+  color: #555555; /* Color ligeramente más claro para subtítulos */
+  margin-top: 20px; /* Espacio adicional arriba del subtítulo */
+  margin-bottom: 10px; /* Espacio adicional debajo del subtítulo */
+}
+
+p {
+  font-size: 1.5em;
+  margin-top: 20px;
+  margin-bottom: 30px; /* Espacio adicional debajo del párrafo */
+  font-weight: bold; /* Ajuste del peso de la fuente para un aspecto más uniforme */
+  color: #333333;
+
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+  color: #333333;
+  font-family: 'Times New Roman', Times, serif; /* Fuente consistente con el contenedor */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+input[type="date"],
+select {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #cccccc;
+  border-radius: 5px;
+  font-size: 1em;
+  font-family: 'Times New Roman', Times, serif; /* Fuente consistente con el contenedor */
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+select:focus {
+  border-color: #ff6347;
+}
+
+input[type="submit"] {
+  background-color: #ff6f00; /* Color base en naranja */
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  padding: 15px 30px; /* Incrementa el tamaño del botón */
+  cursor: pointer;
+  font-size: 1.4em; /* Incrementa el tamaño de la fuente */
+  display: block;
+  margin: 30px auto 0; /* Separación del contenido previo y centrado */
+  text-shadow: 1px 1px #000000;
+  transition: background-color 0.3s ease, background-size 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Transiciones para el efecto hover */
+  background-image: linear-gradient(45deg, #ff6f00, #f7f700); /* Gradiente inicial */
+  background-size: 200% 200%; /* Tamaño del gradiente para la transición */
+  background-position: right bottom; /* Posición inicial del gradiente */
+}
+
+input[type="submit"]:hover {
+  background-position: left top; /* Posición del gradiente al hacer hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transform: scale(1.05); /* Efecto de escala */
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.form-row .form-group {
+  flex: 1 1 calc(33.333% - 15px);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+}
+
+.card-column {
+  background-color: #f9f9f9;
+  border-radius: 3px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.card-column:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo adicional para los contenedores de casillas de verificación y botones de opción */
+.checkbox-container,
+.radio-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 15px 0;
+  font-size: 1.2em; /* Incrementa el tamaño de la fuente para una mejor visibilidad */
+  font-family: 'Times New Roman', Times, serif; /* Fuente consistente con el contenedor */
+}
+
+.checkbox-container label,
+.radio-container label {
+  font-size: 1.2em; /* Incrementa el tamaño de la fuente para una mejor visibilidad */
+  font-family: 'Times New Roman', Times, serif; /* Fuente consistente con el contenedor */
+}
+
+.checkbox-container input[type="checkbox"],
+.radio-container input[type="radio"] {
+  width: 25px; /* Incrementa el tamaño de las casillas de verificación y botones de opción */
+  height: 25px; /* Incrementa el tamaño de las casillas de verificación y botones de opción */
+  margin-right: 10px;
+  box-sizing: border-box; /* Asegura que el padding y el borde no afecten el tamaño */
+  border-radius: 0; /* Elimina el borde redondeado */
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  .form-row .form-group {
+    flex: 1 1 100%; /* Hace que cada grupo de formulario ocupe el 100% del ancho en pantallas pequeñas */
+  }
+
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* Cambia a 2 columnas en pantallas pequeñas */
+  }
+
+  .card-column {
+    font-size: 0.9em; /* Ajusta el tamaño del texto en las tarjetas para pantallas pequeñas */
+  }
+}
+
+/* Ajustes para pantallas muy pequeñas (móviles) */
+@media (max-width: 480px) {
+  .container {
+    padding: 10px; /* Reduce el padding del contenedor en pantallas móviles */
+  }
+
+  h1 {
+    font-size: 1.5em; /* Ajusta el tamaño del encabezado para pantallas móviles */
+  }
+
+  p {
+    font-size: 1em; /* Ajusta el tamaño del texto en párrafos para pantallas móviles */
+  }
+
+  .form-row .form-group {
+    flex: 1 1 100%; /* Hace que cada grupo de formulario ocupe el 100% del ancho en pantallas móviles */
+  }
+
+  .grid {
+    grid-template-columns: 1fr; /* Cambia a 1 columna en pantallas móviles */
+  }
+}

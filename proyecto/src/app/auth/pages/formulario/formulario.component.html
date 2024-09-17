@@ -1,0 +1,100 @@
+<br>
+
+<h1>Formulario de Paquete Turístico Personalizado</h1>
+<div class="container">
+  <form (ngSubmit)="enviarFormulario()" #formulario="ngForm">
+    <!-- Información de Contacto -->
+    <p>Información de Contacto:</p>
+    <div class="form-group">
+      <label for="nombre">Nombre Completo:</label>
+      <input type="text" id="nombre" [(ngModel)]="nombre" name="nombre" required>
+    </div>
+    <div class="form-group">
+      <label for="correo">Correo Electrónico:</label>
+      <input type="email" id="correo" [(ngModel)]="correo" name="correo" required>
+    </div>
+    <div class="form-group">
+      <label for="telefono">Teléfono/Celular:</label>
+      <input type="tel" id="telefono" [(ngModel)]="telefono" name="telefono" required>
+    </div>
+
+    <!-- Detalles del Paquete -->
+    <p>Detalles del Paquete:</p>
+    <div class="form-row">
+      <div class="form-group">
+        <label for="dias">Días:</label>
+        <input type="number" id="dias" [(ngModel)]="dias" name="dias" min="0" required>
+      </div>
+      <div class="form-group">
+        <label for="noches">Noches:</label>
+        <input type="number" id="noches" [(ngModel)]="noches" name="noches" min="0" required>
+      </div>
+      <div class="form-group">
+        <label for="adultos">Adultos:</label>
+        <input type="number" id="adultos" [(ngModel)]="adultos" name="adultos" min="0" required>
+      </div>
+      <div class="form-group">
+        <label for="ninos">Niños:</label>
+        <input type="number" id="ninos" [(ngModel)]="ninos" name="ninos" min="0" required>
+      </div>
+      <div class="form-group">
+        <label for="fechaInicial">Fecha Inicial:</label>
+        <input type="date" id="fechaInicial" [(ngModel)]="fechaInicial" name="fechaInicial" required>
+      </div>
+      <div class="form-group">
+        <label for="transporte">Transporte:</label>
+        <select id="transporte" [(ngModel)]="transporte" name="transporte" required>
+          <option value="">Seleccione una opción</option>
+          <option value="avion">Avión</option>
+          <option value="autobus">Autobús</option>
+          <option value="taxi">Taxi</option>
+          <option value="otro">Otro</option>
+        </select>
+      </div>
+    </div>
+
+    <!-- Selección de Hoteles -->
+    <p>Seleccione el hotel que desea incluir en su paquete:</p>
+    <div class="grid bm-8">
+      <div *ngFor="let hotel of hoteles" class="card-column">
+        <personalizado-hotel-card [hotel]="hotel"
+          (seleccionado)="actualizarSeleccion(hotel)"></personalizado-hotel-card>
+      </div>
+    </div>
+    <hr>
+
+    <!-- Selección de Restaurantes -->
+    <p>Seleccione el/los restaurantes que desea incluir en su paquete:</p>
+    <div class="grid bm-8">
+      <div *ngFor="let restaurante of restaurantes" class="card-column">
+        <personalizado-restaurante-card [restaurante]="restaurante"
+          (seleccionado)="actualizarSeleccionRestaurante(restaurante)"></personalizado-restaurante-card>
+      </div>
+    </div>
+    <hr>
+
+    <!-- Selección de Atractivos -->
+    <p>Seleccione el/los atractivos turísticos que desea incluir en su paquete:</p>
+    <div class="grid bm-8">
+      <div *ngFor="let atractivo of atractivos" class="card-column">
+        <personalizado-atractivo-card [atractivo]="atractivo"
+          (seleccionado)="actualizarSeleccionAtractivo(atractivo)"></personalizado-atractivo-card>
+      </div>
+    </div>
+    <hr>
+
+    <!-- Selección de Agencia -->
+    <p>Seleccione la agencia de viajes que manejará su paquete:</p>
+    <div class="grid bm-8">
+      <div *ngFor="let agencia of agencias" class="card-column">
+        <personalizado-agencia-card [agencia]="agencia"
+          (seleccionado)="agencia.selected = !agencia.selected"></personalizado-agencia-card>
+      </div>
+    </div>
+
+    <input type="submit" value="Enviar" class="submit-button">
+  </form>
+  <div *ngIf="mensajeExito" class="mensaje-exito">
+    {{ mensajeExito }}
+  </div>
+</div>

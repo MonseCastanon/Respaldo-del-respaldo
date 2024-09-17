@@ -1,0 +1,167 @@
+<!-- <h1>
+  {{ currentItinerario.iditinerario ? "Editar" : "Añadir" }}
+  Paquete
+  <small *ngIf="currentItinerario.iditinerario">{{ currentItinerario.nombre }}</small>
+</h1> -->
+
+<!-- <div class="container">
+  <form class="form shadow m-3 p-3" [formGroup]="form!" (ngSubmit)="submitForm()">
+      <h1>Itinerario</h1>
+      <div class="row mt-3">
+          <mat-form-field class="col-md-6">
+              <mat-label>Nombre</mat-label>
+              <input matInput formControlName="nombre" placeholder="Inserta el nombre del itinerario">
+          </mat-form-field>
+      </div>
+
+      <ng-container formArrayName="actividades">
+          <ng-container *ngFor="let actividad of actividades.controls;let i = index">
+              <ng-container [formGroupName]="i">
+                  <div class="row mt-3">
+
+                    <mat-form-field class="col-md-6">
+                      <input matInput placeholder="Ingresa el dia #{{i}}" formControlName="dia">
+                    </mat-form-field>
+
+                    <mat-form-field class="col-md-6">
+                      <input matInput placeholder="Ingresa la hora #{{i}}" formControlName="hora">
+                    </mat-form-field>
+
+                    <mat-form-field class="col-md-6">
+                      <input matInput placeholder="Ingresa la actividad #{{i}}" formControlName="actividad">
+                    </mat-form-field>
+
+                      <button type="button" mat-raised-button color="primary" style="width: 10px;height: 34px; margin-left: 10px;margin-right: 10px;" class="ml-2 mr-2" (click)="addActividad()"> + </button>
+                      <button type="button" mat-raised-button color="warn" style="width: 10px;height: 34px; margin-left: 10px;margin-right: 10px;" class="mr-2 ml-2" *ngIf="i>0" (click)="removeActividad(i)"> - </button>
+                  </div>
+              </ng-container>
+          </ng-container>
+      </ng-container>
+      <div class="row mt-3">
+          <button type="submit" mat-raised-button color="primary" class="m-2" style="width: 120px;" [disabled]="!form!.valid">Submit Form</button>
+          <button type="button" mat-raised-button color="warn" class="m-2" style="width: 100px;" (click)="form!.reset()">Reset</button>
+      </div>
+  </form>
+</div> -->
+
+<h1>
+  {{ currentItinerario.id ? 'Editar' : 'Añadir' }}
+  Itinerario
+  <small *ngIf="currentItinerario.id">{{ currentItinerario.nombre }}</small>
+</h1>
+
+<mat-divider class="mb-2"></mat-divider>
+
+<div class="grid">
+  <div class="col-12">
+    <mat-card>
+      <mat-card-content>
+        <form class="grid" [formGroup]="itinerarioForm" (ngSubmit)="onSubmit()">
+          <mat-form-field class="col-12">
+            <mat-label>Nombre</mat-label>
+            <input
+              matInput
+              type="text
+              required"
+              formControlName="nombre"/>
+          </mat-form-field>
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Día 1</mat-label>
+            <input
+              matInput
+              type="text
+              required"
+              formControlName="dia_1"/>
+          </mat-form-field>
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Actividades del día 1</mat-label>
+            <input
+              matInput
+              type="text
+              required"
+              formControlName="actividades_dia_1" />
+          </mat-form-field>
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Día 2</mat-label>
+            <input
+              matInput
+              type="text
+              required"
+              formControlName="dia_2"/>
+          </mat-form-field>
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Actividades del día 2</mat-label>
+            <input
+              matInput
+              type="text
+              required"
+              formControlName="actividades_dia_2" />
+          </mat-form-field>
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Día 3</mat-label>
+            <input
+              matInput
+              type="text
+              required"
+              formControlName="dia_3"/>
+          </mat-form-field>
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Actividades del día 3</mat-label>
+            <input
+              matInput
+              type="text
+              required"
+              formControlName="actividades_dia_3" />
+          </mat-form-field>
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Día 4</mat-label>
+            <input
+              matInput
+              type="text
+              required"
+              formControlName="dia_4"/>
+          </mat-form-field>
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Actividades del día 4</mat-label>
+            <input
+              matInput
+              type="text
+              required"
+              formControlName="actividades_dia_4" />
+          </mat-form-field>
+
+          <!-- <mat-form-field class="col-12">
+            <mat-label>Alternative Image</mat-label>
+            <input
+              matInput
+              type="text"
+              formControlName="alt_img" />
+          </mat-form-field> -->
+        </form>
+        <div class="flex justify-content-between">
+          <button
+            *ngIf="currentItinerario.id"
+            (click) = "onDeleteItinerario()"
+            mat-flat-button
+          >
+            Borrar
+          </button>
+          <button
+            mat-fab extended
+            (click)="onSubmit()"
+            >
+              <mat-icon>save</mat-icon>
+              Guardar
+          </button>
+          <button mat-flat-button color="primary" (click)="goBack()">Regresar</button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="col-12 sm:col-6">
+    <!-- <mat-card>
+      <img mat-card-image [src]="currentItinerario | itinerarioImage" alt="imagen del itinerario">
+    </mat-card> -->
+  </div>
+</div>
+

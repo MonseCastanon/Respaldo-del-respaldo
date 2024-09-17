@@ -1,0 +1,36 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title> {{ hotel.nombre }} </mat-card-title>
+  </mat-card-header>
+
+  <img mat-card-image [src]="hotel | hotelImage" [alt]="hotel.nombre">
+
+
+  <mat-card-content class="mt-2">
+
+    <h4><strong>Localización: </strong> {{ hotel.localizacion }} </h4>
+    <p>
+      <strong>Descripción</strong> {{ hotel.descripcion }}
+      <br>
+      <mat-chip-listbox>
+        <mat-chip *ngFor="let name of
+        hotel.nombre.split(',') | slice:0:3">
+        {{ name }}
+        </mat-chip>
+      </mat-chip-listbox>
+    </p>
+
+  </mat-card-content>
+
+  <mat-divider></mat-divider>
+  <mat-card-actions>
+    <span class="spacer"></span>
+    <button mat-button
+    mat-raised
+    [routerLink]="['/auth/hoteles',hotel.id]">
+    <mat-icon>more_horiz</mat-icon>
+    Más
+    </button>
+  </mat-card-actions>
+</mat-card>
+

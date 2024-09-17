@@ -1,0 +1,41 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title> {{ restaurante.nombre }} </mat-card-title>
+  </mat-card-header>
+
+  <img mat-card-image [src]="restaurante | restauranteImage" [alt]="restaurante.nombre">
+
+
+  <mat-card-content class="mt-2">
+    <h4><strong>Localización: </strong> {{ restaurante.localizacion }} </h4>
+    <p>
+      <strong>Descripción</strong> {{ restaurante.descripcion }}
+      <br>
+      <mat-chip-listbox>
+        <mat-chip *ngFor="let name of
+        restaurante.nombre.split(',') | slice:0:3">
+        {{ name }}
+        </mat-chip>
+      </mat-chip-listbox>
+    </p>
+
+  </mat-card-content>
+
+  <mat-divider></mat-divider>
+  <mat-card-actions>
+    <button mat-button
+    mat-raised
+    color="primary"
+    [routerLink]="['/administrador/editarres',restaurante.id]">
+    <mat-icon>edit</mat-icon>
+    Editar
+    </button>
+    <span class="spacer"></span>
+    <button mat-button
+    mat-raised
+    [routerLink]="['/administrador/restaurantes',restaurante.id]">
+    <mat-icon>more_horiz</mat-icon>
+    Más
+    </button>
+  </mat-card-actions>
+</mat-card>

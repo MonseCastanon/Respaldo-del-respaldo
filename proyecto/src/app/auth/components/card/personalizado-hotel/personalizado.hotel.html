@@ -1,0 +1,6 @@
+<div class="hotel-card">
+  <label>
+    <input type="checkbox" [checked]="hotel.selected" (change)="seleccionarHotel($event, hotel)">
+    {{ hotel.nombre }}
+  </label>
+</div>

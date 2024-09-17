@@ -1,0 +1,14 @@
+export interface Restaurante {
+  id:string;
+  nombre:string;
+  categoria:string;
+  tipologia:string;
+  localizacion:string;
+  descripcion:string;
+  infraestructura:string;
+  accesibilidad:string;
+  servicios:string;
+  costo:string;
+  contacto:string;
+  alt_img?:string;
+}

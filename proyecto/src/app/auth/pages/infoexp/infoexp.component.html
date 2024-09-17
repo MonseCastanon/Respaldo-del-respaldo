@@ -1,0 +1,44 @@
+<ng-template #divLoading>
+  <mat-grid-list cols="1">
+    <mat-grid-tile>
+      <mat-spinner></mat-spinner>
+    </mat-grid-tile>
+  </mat-grid-list>
+</ng-template>
+
+<div *ngIf="experiencia; else divLoading" class="grid p-2">
+
+    <mat-card class="col-12 sm:col-6">
+        <mat-card-header>
+          <mat-card-title>{{ experiencia.nombre }}</mat-card-title>
+          <mat-card-subtitle> {{experiencia.contacto }}</mat-card-subtitle>
+        </mat-card-header>
+
+       <img [src]="experiencia | experienciaImage" [alt]="experiencia.nombre" mat-card-image />
+
+    </mat-card>
+    <mat-card class="col-12 sm:col-6">
+          <mat-card-header>
+            <mat-card-title>Información</mat-card-title>
+            <mat-card-subtitle>{{experiencia.nombre}}</mat-card-subtitle>
+          </mat-card-header>
+
+          <mat-card-content>
+            <mat-list>
+              <p><b>Descripción</b></p><div class="texto">{{experiencia.descripcion}}</div><br>
+              <p><b>Accesibilidad</b></p><div class="texto">{{experiencia.accesibilidad}}</div><br>
+              <p><b>Servicio</b></p><div class="texto">{{experiencia.servicio}}</div><br>
+              <p><b>Costo</b></p><div class="texto">{{experiencia.costo}}</div><br>
+              <p><b>Contacto</b></p><div class="texto">{{experiencia.contacto}}</div>
+            </mat-list>
+
+            <button
+              mat-button
+              color="warning"
+              (click)="goBack()"
+              >
+              Regresar
+            </button>
+          </mat-card-content>
+    </mat-card>
+</div>

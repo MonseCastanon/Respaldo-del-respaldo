@@ -1,0 +1,40 @@
+<ng-template #divLoading>
+  <mat-grid-list cols="1">
+    <mat-grid-tile>
+      <mat-spinner></mat-spinner>
+    </mat-grid-tile>
+  </mat-grid-list>
+</ng-template>
+
+<div *ngIf="agencia; else divLoading" class="grid p-2">
+
+    <mat-card class="col-12 sm:col-6">
+        <mat-card-header>
+          <mat-card-title>{{ agencia.nombre }}</mat-card-title>
+          <mat-card-subtitle> {{agencia.tipo }}</mat-card-subtitle>
+        </mat-card-header>
+
+       <img [src]="agencia | agenciaImage" [alt]="agencia.nombre" mat-card-image />
+
+    </mat-card>
+    <mat-card class="col-12 sm:col-6">
+          <mat-card-header>
+            <mat-card-title>Información</mat-card-title>
+            <mat-card-subtitle>{{agencia.nombre}}</mat-card-subtitle>
+          </mat-card-header>
+
+          <mat-card-content>
+            <mat-list>
+              <p><b>Tipo</b></p><div class="texto">{{agencia.tipo}}</div><br>
+              <p><b>Ubicación</b></p><div class="texto">{{agencia.ubicacion}}</div><br>
+              <p><b>Dirección</b></p><div class="texto">{{agencia.direccion}}</div><br>
+              <p><b>Contactos</b></p><div class="texto">{{agencia.contactos}}</div><br>
+              <p><b>Redes Sociales</b></p><div class="texto">{{agencia.red_social}}</div><br>
+              <p><b>Correo</b></p><div class="texto">{{agencia.correo}}</div>
+            </mat-list>
+
+            <button mat-flat-button color="primary" (click)="goBack()">Regresar</button>
+
+          </mat-card-content>
+    </mat-card>
+</div>

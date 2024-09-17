@@ -1,0 +1,15 @@
+mat-toolbar {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+mat-toolbar-button {
+  margin-right: 30px;
+}
+
+mat-toolbar-button:last-child {
+  margin-right: 15px;
+}
+

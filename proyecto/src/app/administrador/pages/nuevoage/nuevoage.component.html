@@ -1,0 +1,105 @@
+<h1>
+  {{ currentAgencia.id ? 'Editar' : 'Añadir' }}
+  Agencia
+  <small *ngIf="currentAgencia.id">{{ currentAgencia.nombre }}</small>
+</h1>
+
+<mat-divider class="mb-2"></mat-divider>
+
+<div class="grid">
+  <div class="col-12 sm:col-6">
+    <mat-card>
+      <mat-card-content>
+        <form class="grid" [formGroup]="agenciaForm" (ngSubmit)="onSubmit()">
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Nombre</mat-label>
+            <input
+              matInput
+              type="text
+              required"
+              formControlName="nombre"/>
+          </mat-form-field>
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Tipo</mat-label>
+            <input
+              matInput
+              type="text
+              required"
+              formControlName="tipo"/>
+          </mat-form-field>
+          <mat-form-field class="col-12">
+            <mat-label>Ubicacion</mat-label>
+            <input
+              matInput
+              type="text
+              required"
+              formControlName="ubicacion" />
+          </mat-form-field>
+          <mat-form-field class="col-12">
+            <mat-label>Direccion</mat-label>
+            <input
+              matInput
+              type="text
+              required"
+              formControlName="direccion"/>
+          </mat-form-field>
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Contactos</mat-label>
+            <input
+              matInput
+              type="text
+              required"
+              formControlName="contactos"/>
+          </mat-form-field>
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Redes Sociales</mat-label>
+            <input
+              matInput
+              type="text
+              required"
+              formControlName="red_social"/>
+          </mat-form-field>
+          <mat-form-field class="col-12 sm:col-6">
+            <mat-label>Correo</mat-label>
+            <input
+              matInput
+              type="text
+              required"
+              formControlName="correo"/>
+          </mat-form-field>
+
+          <mat-form-field class="col-12">
+            <mat-label>Alternative Image</mat-label>
+            <input
+              matInput
+              type="text"
+              formControlName="alt_img" />
+          </mat-form-field>
+        </form>
+        <div class="flex justify-content-between">
+          <button
+            *ngIf="currentAgencia.id"
+            (click) = "onDeleteAgencia()"
+            mat-flat-button
+          >
+            Borrar
+          </button>
+          <button
+            mat-fab extended
+            (click)="onSubmit()"
+            >
+              <mat-icon>save</mat-icon>
+              Guardar
+          </button>
+          <button mat-flat-button color="primary" (click)="goBack()">Regresar</button>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  <div class="col-12 sm:col-6">
+    <mat-card>
+      <img mat-card-image [src]="currentAgencia | agenciaImage" alt="imagen del agencia">
+    </mat-card>
+  </div>
+
+</div>

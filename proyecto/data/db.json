@@ -1,0 +1,385 @@
+{
+  "administradores": [
+    {
+      "id": "1",
+      "usuario": "administrador",
+      "password": "12345"
+    }
+  ],
+  "hoteles": [
+    {
+      "id": "h-relicario",
+      "nombre": "El Relicario",
+      "categoria": "categoria h-1",
+      "tipologia": "tipologia h-1",
+      "localizacion": "Calle: Calzada de los Heroes 12",
+      "descripcion": "Bienvenido a El Relicario De La Patria Hotel, una fantástica opción para viajeros como tú.",
+      "accesibilidad": "accesibilidad h-1",
+      "num_habitaciones": "Num_habitaciones h-1",
+      "actividades": "Actividades h-1",
+      "servicios": "Servicios h-4",
+      "num_visitante_ideal": "num_visitante_ideal h-1",
+      "fecha_ideal_visita": "fecha_ideal_visita h-1",
+      "segmento_mercado_potencial": "segmento_mercado_potencial h-1",
+      "costo": "costo h-1",
+      "contacto": "Contacto h-1",
+      "alt_img": null
+    },
+    {
+      "id": "h-casamia",
+      "nombre": "CasaMia",
+      "categoria": "categoria h-2",
+      "tipologia": "tipologia h-2",
+      "localizacion": "Calle: San Luis Potosi 9-B casi esq. Oaxaca",
+      "descripcion": "El Hotel CasaMia en Dolores Hidalgo es un encantador hotel de dos estrellas que combina la arquitectura colonial con un ambiente moderno y acogedor.",
+      "accesibilidad": "accesibilidad h-2",
+      "num_habitaciones": "Num_habitaciones h-2",
+      "actividades": "Actividades h-2",
+      "servicios": "Servicios h-4",
+      "num_visitante_ideal": "num_visitante_ideal h-2",
+      "fecha_ideal_visita": "fecha_ideal_visita h-2",
+      "segmento_mercado_potencial": "segmento_mercado_potencial h-2",
+      "costo": "costo h-2",
+      "contacto": "Contacto h-2"
+    },
+    {
+      "id": "h-anber",
+      "nombre": "Anber",
+      "categoria": "categoria h-3",
+      "tipologia": "tipologia h-3",
+      "localizacion": "Calle: Av. Guanajuato 9",
+      "descripcion": "La búsqueda del hotel pequeño ideal en Dolores Hidalgo no tiene por qué ser difícil. Bienvenido a Hotel Anber, una fantástica opción para viajeros como tú.",
+      "accesibilidad": "accesibilidad h-3",
+      "num_habitaciones": "Num_habitaciones h-3",
+      "actividades": "Actividades h-3",
+      "servicios": "Servicios h-4",
+      "num_visitante_ideal": "num_visitante_ideal h-3",
+      "fecha_ideal_visita": "fecha_ideal_visita h-3",
+      "segmento_mercado_potencial": "segmento_mercado_potencial h-3",
+      "costo": "costo h-3",
+      "contacto": "Contacto h-3"
+    }
+  ],
+  "restaurantes": [
+    {
+      "id": "r-elfruty",
+      "nombre": "El Fruty Restaurante",
+      "categoria": "categoria r-1",
+      "tipologia": "tipologia r-1",
+      "localizacion": "Calle: Miguel Hidalgo 2, Zona Centro",
+      "infraestructura": "Infraestructura r-1",
+      "descripcion": "Disfruta de la asombrosa comida que sirven en este restaurante.",
+      "accesibilidad": "Accesibilidad r-1",
+      "servicios": "Servicio r-1",
+      "costo": "Costo r-1",
+      "contacto": "Contacto r-1",
+      "alt_img": null
+    },
+    {
+      "id": "r-carnitasvicente",
+      "nombre": "Carnitas Vicente",
+      "categoria": "categoria r-2",
+      "tipologia": "tipologia r-2",
+      "localizacion": "Calle: Avenida Norte 65B",
+      "infraestructura": "Infraestructura r-2",
+      "descripcion": "Las carnitas de tradición en Dolores Hidalgo, con el estilo de la casa jugosas y con un buen sabor.",
+      "accesibilidad": "Accesibilidad r-2",
+      "servicios": "Servicio r-2",
+      "costo": "Costo r-2",
+      "contacto": "Contacto r-2"
+    },
+    {
+      "id": "r-tororojoarrecheria",
+      "nombre": "Toro Rojo Arrecheria",
+      "categoria": "categoria r-3",
+      "tipologia": "tipologia r-3",
+      "localizacion": "Calle: Calzada de los Heroes 104, Colonia: Los Pinos",
+      "infraestructura": "Infraestructura r-3",
+      "descripcion": "Este lugar es una excelente opción en relación calidad, precio. Tiene barra de ensaladas, postres, la carne es de calidad y sabor aceptable.",
+      "accesibilidad": "Accesibilidad r-3",
+      "servicios": "Servicio r-3",
+      "costo": "Costo r-3",
+      "contacto": "Contacto r-3"
+    }
+  ],
+  "paquetes": [
+    {
+      "id": "Imagen2",
+      "nombre": "Nieves",
+      "incluye": "Paquete de nieves con un buen sabor.",
+      "tiempo": "tiempo",
+      "hotel": "Hotel paquete 2",
+      "restaurante": "Restaurante paquete 2",
+      "experiencia": "Experiencia paquete 2",
+      "actividad": "Actividades paquete 2",
+      "costo": "costo"
+    },
+    {
+      "id": "Imagen3",
+      "nombre": "Aventura",
+      "incluye": "Paquete con paseos por lugares aventurezcos.",
+      "tiempo": "tiempo",
+      "hotel": "Hotel paquete 3",
+      "restaurante": "Restaurante paquete 3",
+      "experiencia": "Experiencia paquete 3",
+      "actividad": "Actividades paquete 3",
+      "costo": "costo"
+    },
+    {
+      "id": "Imagen1",
+      "nombre": "Cultural",
+      "incluye": "Paquete con paradas culturales en Dolores Hidalgo.",
+      "tiempo": "tiempo",
+      "hotel": "Hotel paquete 4",
+      "restaurante": "Restaurante paquete 4",
+      "experiencia": "Experiencia paquete 4",
+      "actividad": "Actividades paquete 4",
+      "costo": "costo"
+    }
+  ],
+  "culturales": [
+    {
+      "id": "cul-1",
+      "nombre": "Museo del Vino",
+      "descripcion": "El museo de vino logra de forma simple y extraordinaria explicar la historia de la vid y el vino en la Nueva España, el cultivo y la vinificación de la uva lo logra para todo tipo de audiencia en un ámbito acogedor y amigable este museo logra cerrar la brecha de nuestro vacío histórico y cultural del cultivo de la vida.",
+      "accesibilidad": "Accesibilidad mus-1",
+      "servicio": "Servicios mus-1",
+      "contacto": "Contacto mus-1",
+      "costo": "Costo mus-1"
+    },
+    {
+      "id": "cul-2",
+      "nombre": "Museos 2",
+      "descripcion": "Descripcion mus-2",
+      "accesibilidad": "Accesibilidad mus-2",
+      "servicio": "Servicios mus-2",
+      "contacto": "Contacto mus-2",
+      "costo": "Costo mus-2"
+    },
+    {
+      "id": "cul-3",
+      "nombre": "Museos 3",
+      "descripcion": "Descripcion mus-3",
+      "accesibilidad": "Accesibilidad mus-3",
+      "servicio": "Servicios mus-3",
+      "contacto": "Contacto mus-3",
+      "costo": "Costo mus-3"
+    },
+    {
+      "id": "cul-4",
+      "nombre": "Museos 4",
+      "descripcion": "Descripcion mus-4",
+      "accesibilidad": "Accesibilidad mus-4",
+      "servicio": "Servicios mus-4",
+      "contacto": "Contacto mus-4",
+      "costo": "Costo mus-4"
+    }
+  ],
+  "experiencias": [
+    {
+      "id": "exp-1",
+      "nombre": "Feria de las nieves 1",
+      "descripcion": "Descripcion exp-1",
+      "accesibilidad": "Accesibilidad exp-1",
+      "servicio": "Servicios exp-1",
+      "contacto": "Contacto exp-1",
+      "costo": "Costo exp-1"
+    },
+    {
+      "id": "exp-2",
+      "nombre": "Feria de las nieves 2",
+      "descripcion": "Descripcion exp-2",
+      "accesibilidad": "Accesibilidad exp-2",
+      "servicio": "Servicios exp-2",
+      "contacto": "Contacto exp-2",
+      "costo": "Costo exp-2"
+    },
+    {
+      "id": "exp-3",
+      "nombre": "Feria de las nieves 3",
+      "descripcion": "Descripcion exp-3",
+      "accesibilidad": "Accesibilidad exp-3",
+      "servicio": "Servicios exp-3",
+      "contacto": "Contacto exp-3",
+      "costo": "Costo exp-3"
+    }
+  ],
+  "naturales": [
+    {
+      "id": "nat-1",
+      "nombre": "Viñedo y Hacienda San Bernardino ",
+      "descripcion": "Hacienda San Bernardino es un viñedo familiar dedicada a su tradición vitivinícola, ubicada en el corazón de la región productora de uva y vino más antigua de México. ",
+      "accesibilidad": "Accesibilidad lug-1",
+      "servicio": "Servicios lug-1",
+      "contacto": "Contacto lug-1",
+      "costo": "Costo lug-1"
+    },
+    {
+      "id": "nat-2",
+      "nombre": "Lugar 2",
+      "descripcion": "Descripcion lug-2",
+      "accesibilidad": "Accesibilidad lug-2",
+      "servicio": "Servicios lug-2",
+      "contacto": "Contacto lug-2",
+      "costo": "Costo lug-2"
+    },
+    {
+      "id": "nat-3",
+      "nombre": "Lugar 3",
+      "descripcion": "Descripcion lug-3",
+      "accesibilidad": "Accesibilidad lug-3",
+      "servicio": "Servicios lug-3",
+      "contacto": "Contacto lug-3",
+      "costo": "Costo lug-3"
+    },
+    {
+      "id": "nat-4",
+      "nombre": "Lugar 3",
+      "descripcion": "Descripcion lug-4",
+      "accesibilidad": "Accesibilidad lug-4",
+      "servicio": "Servicios lug-4",
+      "contacto": "Contacto lug-4",
+      "costo": "Costo lug-4"
+    }
+  ],
+  "personalizados": [
+    {
+      "id": "per-1",
+      "nombre": "per-1",
+      "hotel": "per-1",
+      "restaurante": "per-1",
+      "experiencia": "per-1",
+      "servicio": "Servicios per-1",
+      "costo": "Costo per-1"
+    }
+  ],
+  "itinerarios": [
+    {
+      "id": "Imagen1",
+      "nombre": "nombre i-1",
+      "dia_1": "dia1 i-1",
+      "actividades_dia_1": "actividad1 i-1",
+      "dia_2": "dia2 i-1",
+      "actividades_dia_2": "actividad2 i-1",
+      "dia_3": "dia3 i-1",
+      "actividades_dia_3": "actividad3 i-1",
+      "dia_4": "dia i-1",
+      "actividades_dia_4": "actividad4 i-1"
+    },
+    {
+      "id": "Imagen11",
+      "nombre": "nombre i-2",
+      "dia_1": "dia1 i-2",
+      "actividades_dia_1": "actividad1 i-2",
+      "dia_2": "dia2 i-2",
+      "actividades_dia_2": "actividad2 i-2",
+      "dia_3": "dia3 i-2",
+      "actividades_dia_3": "actividad3 i-2",
+      "dia_4": "dia i-2",
+      "actividades_dia_4": "actividad4 i-2"
+    },
+    {
+      "id": "Imagen12",
+      "nombre": "nombre i-3",
+      "dia_1": "dia1 i-3",
+      "actividades_dia_1": "actividad1 i-3",
+      "dia_2": "dia2 i-1",
+      "actividades_dia_2": "actividad2 i-3",
+      "dia_3": "dia3 i-1",
+      "actividades_dia_3": "actividad3 i-3",
+      "dia_4": "dia i-1",
+      "actividades_dia_4": "actividad4 i-3"
+    }
+  ],
+  "agencias": [
+    {
+      "id": "A-1",
+      "nombre": "Turismo Gilca",
+      "tipo": "Agencia minorista autorizada por SECTUR",
+      "ubicacion": "Dolores Hidalgo, CIN. Gto.",
+      "direccion": "Yucatán # 20 centroooo",
+      "contactos": "4181822986 / 4181845804",
+      "red_social": "https://www.facebook.com › tgilca",
+      "correo": "",
+      "alt_img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSYYu7xXKEZ3eJDb2v1xD03UFOSCE0kxnTmAQ&s"
+    },
+    {
+      "id": "A-2",
+      "nombre": "Eskapate Corporativo Viajero",
+      "tipo": "Agencia minorista autorizada por SECTUR",
+      "ubicacion": "San Luis Potosi, S.L.P. ",
+      "direccion": "coronel Romero 2100 instalaciones de CANACO",
+      "contactos": "4443172663",
+      "red_social": "https://www.facebook.com › tgilca",
+      "correo": "eskapatecorporativo@hotmail.com",
+      "alt_img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1_V4ZwjZJk6Xz_Zb6HgBKnMtXvHB52vGRJg&s"
+    },
+    {
+      "id": "A-3",
+      "nombre": "Independencia Touristic Services ",
+      "tipo": "Agencia minorista autorizada por SECTUR",
+      "ubicacion": "Dolores Hidalgo, CIN. Gto.",
+      "direccion": "Calle Querétaro #16, zona centro",
+      "contactos": "4181501008",
+      "red_social": "https://www.facebook.com/IndependenciaTouristicServicestouristicservicesindependencia.com",
+      "correo": "independenciatouristicservices@gmail.com",
+      "alt_img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbMPAa4y3slsy6dnLGuWQ_1ExJDew_UF1WMw&s"
+    }
+  ],
+  "guias": [
+    {
+      "id": "G-1",
+      "nombre:": "ALICIA GUTIÉRREZ CRUCES",
+      "especializacion": "Guía especializado en un tema o localidad especifica de carácter cultural",
+      "contacto": ""
+    },
+    {
+      "id": "G-2",
+      "nombre:": "ANA LUISA FONSECA GUTIÉRREZ",
+      "especializacion": "Guía especializado en un tema o localidad especifica de carácter cultural",
+      "contacto": ""
+    },
+    {
+      "id": "G-3",
+      "nombre:": "GERARDO HERNANDEZ PICON",
+      "especializacion": "Guía especializado en un tema o localidad especifica de carácter cultural",
+      "contacto": ""
+    },
+    {
+      "id": "G-4",
+      "nombre:": "JOSÉ ALAMILLA RIOS",
+      "especializacion": "Guía especializado en un tema o localidad especifica de carácter cultural",
+      "contacto": ""
+    },
+    {
+      "id": "G-5",
+      "nombre:": "JUAN JOSÉ ROMÁN GODÍNEZ RAMOS",
+      "especializacion": "Guía especializado en un tema o localidad especifica de carácter cultural",
+      "contacto": ""
+    },
+    {
+      "id": "G-6",
+      "nombre:": "MARIBEL JIMÉNEZ GALVÁN",
+      "especializacion": "Guía especializado en un tema o localidad especifica de carácter cultural",
+      "contacto": ""
+    },
+    {
+      "id": "G-7",
+      "nombre:": "MIGUEL GALLEGOS RAMIREZ",
+      "especializacion": "Guía de turista general",
+      "contacto": ""
+    },
+    {
+      "id": "G-8",
+      "nombre:": "RAFAEL GUTIERREZ GARCIA",
+      "especializacion": "Guía de turista general",
+      "contacto": "418 1176973"
+    },
+    {
+      "id": "G-9",
+      "nombre:": "SANDRO “COMACORAN”",
+      "especializacion": "Guía de turista general",
+      "contacto": "418 104 1623"
+    }
+  ]
+}

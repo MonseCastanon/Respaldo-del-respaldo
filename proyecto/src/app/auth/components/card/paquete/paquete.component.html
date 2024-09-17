@@ -1,0 +1,32 @@
+<mat-card>
+  <mat-card-header>
+    <mat-card-title> {{ paquete.nombre }} </mat-card-title>
+  </mat-card-header>
+
+    <img mat-card-image [src]="paquete | paqueteImage" [alt]="paquete.nombre">
+
+
+    <mat-card-content class="mt-2">
+      <p>
+        <strong>Dias:</strong> {{ paquete.dia }}
+        <br>
+        <strong>Noches:</strong> {{ paquete.noche }}
+        <br />
+        <mat-chip-listbox>
+          <mat-chip
+            *ngFor="let name of paquete.nombre.split(',') | slice : 0 : 3"
+          >
+            {{ name }}
+          </mat-chip>
+        </mat-chip-listbox>
+      </p>
+    </mat-card-content>
+<br>
+  <mat-divider></mat-divider>
+  <mat-card-actions>
+    <button mat-button mat-raised [routerLink]="['/auth/paquetes', paquete.id]">
+      <mat-icon>more_horiz</mat-icon>
+      Más
+    </button>
+  </mat-card-actions>
+</mat-card>

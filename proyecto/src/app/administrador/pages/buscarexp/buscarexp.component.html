@@ -1,0 +1,31 @@
+<div class="flex flex-column p-2">
+
+  <h3>Buscador de Experiencias</h3>
+
+  <mat-form-field>
+      <mat-label>Buscador</mat-label>
+      <input
+      type="text"
+      matInput
+      [formControl]="searchInput"
+      (input)="searchExperiencias()"
+      [matAutocomplete]="auto"
+      />
+
+  <mat-autocomplete autoActiveFirstOption
+  #auto="matAutocomplete"
+  (optionSelected)="onSelectedOption( $event )"
+  >
+  <mat-option *ngFor="let experiencia of experiencias" [value]="experiencia">
+      {{ experiencia.nombre}}
+  </mat-option>
+
+  <mat-option
+  *ngIf="experiencias.length === 0 && searchInput.value && searchInput.value.length>0"
+  value="">
+  No se encontro nada con el termino {{searchInput.value}}
+</mat-option>
+</mat-autocomplete>
+</mat-form-field>
+{{ selectedExperiencia | json}}
+</div>
