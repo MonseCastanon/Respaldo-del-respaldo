@@ -12,5 +12,4 @@ export class MapComponent implements AfterViewInit {
   ngAfterViewInit(): void {
     const mapContainer = document.getElementById('mapContainer')
   }
-
 }
