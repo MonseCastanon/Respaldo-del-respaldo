@@ -8,10 +8,12 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, NgModel } from '@angular/forms';
 import { FormularioComponent } from './auth/pages/formulario/formulario.component';
+import { MapComponent } from './map/map.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    MapComponent,
     //FormularioComponent,
   ],
   imports: [
