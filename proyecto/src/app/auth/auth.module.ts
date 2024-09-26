@@ -37,7 +37,7 @@ import { ExperienciaImagePipe } from './pipes/experiencia-image.pipe';
 import { FormsModule } from '@angular/forms';
 import { PersonalizadoAtractivoComponent } from './components/card/personalizado-atractivo/personalizado-atractivo.component';
 import { InfoitiComponent } from './pages/infoiti/infoiti.component';
-import { MapComponent } from './components/card/map/map.component';
+
 
 
 @NgModule({
@@ -76,14 +76,13 @@ import { MapComponent } from './components/card/map/map.component';
     ListalugarComponent,
     PersonalizadoAtractivoComponent,
     InfoitiComponent,
-    MapComponent,
 
   ],
   imports: [
     CommonModule,
     AuthRoutingModule,
     MaterialModule,
-    FormsModule,
-  ]})
-  
+    FormsModule
+  ]
+})
 export class AuthModule { }
