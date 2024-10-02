@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
 const { Sequelize, DataTypes } = require('sequelize');
+const IPData = require('ipdata').default;
 
 const app = express();
 app.use(bodyParser.json());
