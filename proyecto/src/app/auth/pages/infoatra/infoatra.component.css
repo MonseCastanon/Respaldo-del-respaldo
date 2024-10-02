@@ -1,4 +1,5 @@
 .texto{
+  font-family: Century Gothic;
   display: -webkit-box;
   max-width: 600px;
   -webkit-line-clamp: auto;

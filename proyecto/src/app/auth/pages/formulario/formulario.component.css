@@ -1,11 +1,11 @@
 /* Estilo general del formulario */
 .container {
-  max-width: 800px; /* Establece el ancho máximo del contenedor principal */
+  max-width: 90%; /* Establece el ancho máximo del contenedor principal */
   margin: 0 auto; /* Centra el contenedor horizontalmente en la página */
-  background-color: #ffffff;
+  background: #ffe2e2; /*Color de fondo de la página*/
   border-radius: 15px;
   padding: 20px;
-  font-family: 'Times New Roman', Times, serif; /* Fuente más formal */
+  font-family: 'Century Gothic'; /* Fuente más formal */
   color: #333333;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -14,13 +14,14 @@ h1 {
   text-align: center;
   color: #333333;
   font-size: 2.5em; /* Tamaño del texto ajustado para mayor formalidad */
-  font-family: 'Georgia', serif; /* Fuente más formal para el encabezado */
+  font-family: 'Century Gothic'; /* Fuente más formal para el encabezado */
   text-shadow: 1px 1px #aaaaaa;
   margin-bottom: 20px; /* Espacio adicional debajo del título */
 }
 
 h2 {
   font-size: 2em; /* Tamaño del texto para subtítulos */
+  font-family: Century Gothic;
   color: #555555; /* Color ligeramente más claro para subtítulos */
   margin-top: 20px; /* Espacio adicional arriba del subtítulo */
   margin-bottom: 10px; /* Espacio adicional debajo del subtítulo */
@@ -28,6 +29,7 @@ h2 {
 
 p {
   font-size: 1.5em;
+  font-family: Century Gothic;
   margin-top: 20px;
   margin-bottom: 30px; /* Espacio adicional debajo del párrafo */
   font-weight: bold; /* Ajuste del peso de la fuente para un aspecto más uniforme */
@@ -41,10 +43,10 @@ p {
 
 label {
   display: block;
+  font-family: 'Century Gothic';
   margin-bottom: 5px;
   font-weight: bold;
   color: #333333;
-  font-family: 'Times New Roman', Times, serif; /* Fuente consistente con el contenedor */
 }
 
 input[type="text"],
@@ -58,7 +60,7 @@ select {
   border: 2px solid #cccccc;
   border-radius: 5px;
   font-size: 1em;
-  font-family: 'Times New Roman', Times, serif; /* Fuente consistente con el contenedor */
+  font-family: 'Century Gothic'; /* Fuente consistente con el contenedor */
   transition: border-color 0.3s ease;
 }
 
@@ -72,7 +74,7 @@ select:focus {
 }
 
 input[type="submit"] {
-  background-color: #ff6f00; /* Color base en naranja */
+  background-color: #cf6992; /* Color base en naranja */
   border: none;
   border-radius: 5px;
   color: #ffffff;
@@ -83,7 +85,7 @@ input[type="submit"] {
   margin: 30px auto 0; /* Separación del contenido previo y centrado */
   text-shadow: 1px 1px #000000;
   transition: background-color 0.3s ease, background-size 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Transiciones para el efecto hover */
-  background-image: linear-gradient(45deg, #ff6f00, #f7f700); /* Gradiente inicial */
+  background-image: linear-gradient(45deg, #cf6992, #ffffff); /* Gradiente inicial */
   background-size: 200% 200%; /* Tamaño del gradiente para la transición */
   background-position: right bottom; /* Posición inicial del gradiente */
 }
@@ -138,7 +140,7 @@ input[type="submit"]:hover {
 .checkbox-container label,
 .radio-container label {
   font-size: 1.2em; /* Incrementa el tamaño de la fuente para una mejor visibilidad */
-  font-family: 'Times New Roman', Times, serif; /* Fuente consistente con el contenedor */
+  font-family: 'Century Gothic'; /* Fuente consistente con el contenedor */
 }
 
 .checkbox-container input[type="checkbox"],

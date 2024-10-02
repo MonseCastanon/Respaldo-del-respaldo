@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { Error404PageComponent } from './shared/pages/error404-page/error404-page.component';
 
+
 const routes: Routes = [  
   { path: 'auth', loadChildren: () => import('./auth/auth.module').then( m => m.AuthModule )},
   { path: 'administrador', loadChildren: () => import('./administrador/administrador.module').then( m => m.AdministradorModule ), canActivate: [ LoginGuard ]},
