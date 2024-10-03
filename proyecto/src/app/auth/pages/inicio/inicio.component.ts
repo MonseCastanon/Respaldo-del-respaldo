@@ -12,6 +12,12 @@ export class InicioComponent implements AfterViewInit {
   private map: any;
   private userMarker: L.Marker<any> | undefined;
 
+  ngOnInit(): void {
+    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
+    //Add 'implements OnInit' to the class.
+    this.initMap();
+  }
+
   ngAfterViewInit(): void {
     // Retrasar la inicialización del mapa para asegurarse de que el DOM esté completamente listo
     setTimeout(() => {

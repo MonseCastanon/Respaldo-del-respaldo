@@ -10,7 +10,7 @@ import * as L from 'leaflet';
   templateUrl: './listalugar.component.html',
   styleUrls: ['./listalugar.component.css']
 })
-export class ListalugarComponent implements OnInit, AfterViewInit {
+export class ListalugarComponent implements OnInit {
 
   private map:any;
   private userMarker: L.Marker<any> | undefined;
@@ -48,11 +48,14 @@ export class ListalugarComponent implements OnInit, AfterViewInit {
   }
 
   private initMap(): void {
-    this.map = L.map('map').setView([21.1561, -100.9310], 14);
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    this.map = L.map('map').setView([21.1561, -100.9310], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(this.map);
+    //const popup = L.popup().setLatLng([21.1561, -100.9310]).setContent("Dolores Hidalgo").openOn(this.map);
+    const marker = L.marker([21.1561, -100.9310]).addTo(this.map)
+      .openPopup()
+      .bindPopup('Aqui andamos');
   }
 }
-
