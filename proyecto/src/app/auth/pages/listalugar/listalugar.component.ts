@@ -13,6 +13,7 @@ import * as L from 'leaflet';
 export class ListalugarComponent implements OnInit {
 
   private map:any;
+  private map2:any;
   private userMarker: L.Marker<any> | undefined;
 
   public hoteles: Hotel[] = [];
@@ -45,6 +46,10 @@ export class ListalugarComponent implements OnInit {
     setTimeout(() => {
       this.initMap();
     }, 0);
+
+    setTimeout(() => {
+      this.initMap2();
+    }, 0);
   }
 
   private initMap(): void {
@@ -55,6 +60,18 @@ export class ListalugarComponent implements OnInit {
     }).addTo(this.map);
     //const popup = L.popup().setLatLng([21.1561, -100.9310]).setContent("Dolores Hidalgo").openOn(this.map);
     const marker = L.marker([21.1561, -100.9310]).addTo(this.map)
+      .openPopup()
+      .bindPopup('Aqui andamos');
+  }
+
+  private initMap2(): void {
+    this.map2 = L.map('map2').setView([21.1561, -100.9310], 13);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+    }).addTo(this.map2);
+    //const popup = L.popup().setLatLng([21.1561, -100.9310]).setContent("Dolores Hidalgo").openOn(this.map);
+    const marker = L.marker([21.1561, -100.9310]).addTo(this.map2)
       .openPopup()
       .bindPopup('Aqui andamos');
   }
