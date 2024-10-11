@@ -80,37 +80,39 @@ app.listen(3001, () => {
   console.log("Servidor escuchando en el puerto 3001");
 });
 
-("use strict");
+// JS de Instagram
 
-const galery = document.querySelector(".galery");
-const feed = document.querySelector(".contenedor-galery");
-const next = document.querySelector("#next");
-const prev = document.querySelector("#prev");
+// ("use strict");
 
-const tokenIG = "AQUÍ-PONEMOS-TOKEN-DE-PÁGINA";
-const url = `https://graph.instagram.com/media?fields=thumbnail_url,media_url,caption,permalink&limit=80&access_token=${tokenIG}"   
-=${TOKEN}`;
+// const galery = document.querySelector(".galery");
+// const feed = document.querySelector(".contenedor-galery");
+// const next = document.querySelector("#next");
+// const prev = document.querySelector("#prev");
 
-fetch(url)
-  .then((res) => res.json())
-  .then((data) => CrearHtml(data.data));
+// const tokenIG = "AQUÍ-PONEMOS-TOKEN-DE-PÁGINA";
+// const url = `https://graph.instagram.com/media?fields=thumbnail_url,media_url,caption,permalink&limit=80&access_token=${tokenIG}"   
+// =${TOKEN}`;
 
-function CrearHtml() {
-  for (const img of data) {
-    galery.innerHTML += `
-      <div class="image overflow">
-      <img loading=laz" src="${img.media_url}" alt="">
-      <div class="opacy-hover">
-      <a href="${img.permalink}" class="caption">
-      <p>
-      ${img.caption}.slice(0, 100)
-      </p>
-      </a>
-      </div>
-      </div>
-`;
-  }
-}
+// fetch(url)
+//   .then((res) => res.json())
+//   .then((data) => CrearHtml(data.data));
+
+// function CrearHtml() {
+//   for (const img of data) {
+//     galery.innerHTML += `
+//       <div class="image overflow">
+//       <img loading=laz" src="${img.media_url}" alt="">
+//       <div class="opacy-hover">
+//       <a href="${img.permalink}" class="caption">
+//       <p>
+//       ${img.caption}.slice(0, 100)
+//       </p>
+//       </a>
+//       </div>
+//       </div>
+// `;
+//   }
+// }
 
 next.addEvenListener("click", moveGalery);
 prev.addEvenListener("click", moveGalery);
