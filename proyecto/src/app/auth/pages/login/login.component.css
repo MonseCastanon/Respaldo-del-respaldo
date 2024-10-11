@@ -1,5 +1,6 @@
 /* Color de fondo del cuerpo */
 body {
+    margin-top: 5%;
     background: linear-gradient(10deg, #DEA4A4, #ffffff); /*Color de fondo de la página*/
     background-attachment: fixed; /*Estilo del color*/
 }
@@ -147,5 +148,5 @@ body {
     height: 45px;
     outline: none;
     width: 100%;
-    margin-bottom: 10px;;
+    margin-bottom: 10px;
   }

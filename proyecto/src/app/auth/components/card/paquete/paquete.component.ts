@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { AfterViewInit, Component, Input, OnInit } from '@angular/core';
 import { Paquete } from '../../../interfaces/paquete.interface';
 
 
@@ -15,4 +15,5 @@ export class PaqueteComponent implements OnInit {
     if ( !this.paquete ) throw Error('Paquete property is required')
   }
 
+  
 }

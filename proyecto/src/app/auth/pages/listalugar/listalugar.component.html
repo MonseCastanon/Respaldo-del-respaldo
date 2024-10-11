@@ -3,11 +3,12 @@
 <h1>Hoteles</h1>
 <mat-divider></mat-divider>
 
+<mat-divider></mat-divider>
+
 <div id="ubicacion">
-  <div id="map"></div>
+  <div id="map" style="height: 200px; width: 50%; margin: 5%"></div>
 </div>
 
-<mat-divider></mat-divider>
 <div class="grid bm-8">
   <div *ngFor="let hotel of hoteles"
   class="col-12 sm:col-4 md:col-3 xl:col-2">
@@ -16,15 +17,8 @@
   </div>
 </div>
 
-<hr>
-
-<div id="ubicacion2">
-  <div id="map2"></div>
-</div>
-
-<hr>
-
 <h1>Restaurantes</h1>
+
 <mat-divider></mat-divider>
 <div class="grid bm-8">
   <div *ngFor="let restaurante of restaurantes"
