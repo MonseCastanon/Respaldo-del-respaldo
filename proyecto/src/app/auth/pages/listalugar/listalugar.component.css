@@ -13,6 +13,8 @@
 
 h1{
   margin-left: 25px;
+  font-family: Century Gothic;
+  text-align: center;
 }
 
 .paquete-card {
@@ -50,4 +52,20 @@ mat-card-content {
   .grid .col-12 {
     flex: 1 1 100%; /* 1 tarjeta por fila */
   }
+}
+
+#map {
+  height: 70%;
+  width: 60%;
+  margin-bottom: 3%; 
+  border: 1px solid #ddd; 
+  border-radius: 10px; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); 
+}
+
+#ubicacion {
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

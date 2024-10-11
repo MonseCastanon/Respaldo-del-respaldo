@@ -1,3 +1,7 @@
 mat-toolbar {
-  background-color: black;
+  transition: background-color 0.3s ease, background-size 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Transiciones para el efecto hover */
+
+  background-color: #DEA4A4;
+  font-family: Century Gothic;
 }
+

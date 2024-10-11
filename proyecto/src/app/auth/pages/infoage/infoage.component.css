@@ -1,9 +1,9 @@
 .texto{
+  font-family: Century Gothic;
   display: -webkit-box;
-  max-width: 600px;
+  max-width: 100%;
   -webkit-line-clamp: auto;
   line-clamp: auto;
   -webkit-box-orient: vertical;
   overflow: hidden;
-
 }

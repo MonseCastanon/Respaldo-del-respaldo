@@ -7,8 +7,9 @@
 }
 
 body {
-  font-family: Arial, sans-serif;
-  background-color: #f7f7f7; /* Gris claro */
+  font-family: Century Gothic;
+  background-color: #ffffff;
+  /* Gris claro */
 }
 
 /* Introducción */
@@ -19,31 +20,34 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #333; /* Negro */
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: #000;
+  /* Negro */
 }
 
 .introduccion p {
+  /*Dolores Hidalgo letras*/
   font-size: 36px;
-  font-weight: bold;
   margin: 0;
-  color: #666; /* Gris oscuro */
+  color: #000;
+  /* Gris oscuro */
   text-align: center;
 }
 
 /* Presentación */
 
 .presentacion {
+  font-family: Century Gothic;
   padding: 20px;
-  background-color: #fff; /* Blanco */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
 .presentacion p {
   font-size: 18px;
   margin: 20px 0;
-  color: #444; /* Gris medio */
+  color: #444;
+  /* Gris medio */
   text-align: justify;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
 /* Imágenes */
@@ -55,11 +59,12 @@ body {
 }
 
 .imagenes img {
-  width: 30%;
+  width: 20%;
   margin: 10px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  background-color: #f7f7f7; /* Gris claro */
+  background-color: #f7f7f7;
+  /* Gris claro */
   border: 1px solid #ddd;
 }
 
@@ -69,6 +74,7 @@ body {
   .introduccion {
     height: 250px;
   }
+
   .imagenes img {
     width: 40%;
   }
@@ -78,6 +84,7 @@ body {
   .introduccion {
     height: 200px;
   }
+
   .imagenes img {
     width: 50%;
   }
@@ -87,6 +94,7 @@ body {
   .introduccion {
     height: 150px;
   }
+
   .imagenes img {
     width: 60%;
   }
@@ -96,6 +104,7 @@ body {
   .introduccion {
     height: 100px;
   }
+
   .imagenes img {
     width: 80%;
   }
@@ -105,7 +114,183 @@ body {
   .introduccion {
     height: 80px;
   }
+
   .imagenes img {
     width: 90%;
   }
 }
+
+/* Estilos del mapa */
+
+#map {
+  height: 70%;
+  /* Ocupa el 70% de la altura del contenedor */
+  width: 60%;
+  /* Ocupa el 60% del ancho del contenedor */
+  margin-bottom: 3%;
+  /* 5% de espacio arriba y abajo, auto centrado a los lados */
+  border: 1px solid #ddd;
+  /* Opcional: agregar un borde */
+  border-radius: 10px;
+  /* Opcional: redondear las esquinas */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  /* Sombra para darle un poco de estilo */
+}
+
+#ubicacion {
+  height: 70%;
+  /* Asegura que el contenedor del mapa ocupe toda la altura de la ventana */
+  display: flex;
+  /* Centra el mapa horizontal y verticalmente */
+  justify-content: center;
+  align-items: center;
+}
+
+#titleMap {
+  font-family: Century Gothic;
+  font-size: 40px;
+  color: #000000;
+  text-align: center;
+  padding: 2%;
+}
+
+/* FEED DE INSTAGRAM */
+
+
+/* html {
+  font-size: 62.5%;
+}
+
+body{
+  font-family: Century Gothic;
+  background-color: #ffffff;
+  color: #0000;
+  margin: 0;
+  font-size: 16px;
+  }
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  text-align: center;
+}
+
+img {
+  width: 100%;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.h {
+  height: 100%;
+}
+
+.overflow {
+  overflow: hidden;
+} */
+
+/* #feed-contenedor {
+  background-color: #ffff00;
+  margin: 5rem 0;
+  width: 100%;
+  overflow: hidden;
+}
+
+.contenedor-galery {
+  width: 100%;
+  overflow: hidden;
+  scroll-behavior: smooth;
+}
+
+.main-galery {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.crevron span {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  font-size: 2rem;
+  color: #0000;
+  width: 4.3rem;
+  height: 4.7rem;
+  background-color: #ef23fa;
+  cursor: pointer;
+}
+
+.chevron span:hover {
+  background-color: #0000;
+}
+
+.chevron #prev {
+  padding-right: .5rem;
+  justify-content: flex-end;
+  left: -1.7rem;
+}
+
+.chevron #next {
+  padding-right: .5rem;
+  justify-content: flex-start;
+  left: -1.7rem;
+}
+
+.galery {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.image {
+  min-width: 20%;
+  height: 273px;
+  position: relative;
+}
+
+.image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.image:hover .opacity-hover {
+  width: 100%;
+}
+
+.caption {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  transform: traslateY(300px);
+  transition: transform 100ms linear;
+}
+
+.captionp {
+  color: White;
+  width: 80%;
+}
+
+.opacity-hover {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  transition: background-color 300ms linear;
+}
+
+.opacity-hover:hover {
+  background-color: #0000;
+}
+
+.opacity-hover:hover .caption {
+  transform: translateY(0px);
+} */

@@ -6,7 +6,10 @@
 }
 
 h1{
+  margin-top: 5%;
   margin-left: 25px;
+  font-family: Century Gothic;
+  text-align: center;
 }
 .grid .col-12 {
   flex: 1 1 calc(33.333% - 20px); /* Calcula el ancho de cada tarjeta considerando el margen */
