@@ -14,8 +14,6 @@ import 'leaflet-routing-machine';  // Importar leaflet-routing-machine
 export class ListalugarComponent implements AfterViewInit, OnInit {
 
   private map: any;
-  private userMarker: L.Marker<any> | undefined;
-  private userLatLng: L.LatLng | undefined;
 
   public hoteles: Hotel[] = [];
   public restaurantes: Restaurante[] = [];
@@ -23,7 +21,7 @@ export class ListalugarComponent implements AfterViewInit, OnInit {
   constructor(
     private hotelesService: HotelesService,
     private restaurantesService: RestaurantesService
-  ){}
+  ) { }
 
   ngOnInit(): void {
     // Cargar hoteles y restaurantes
@@ -55,26 +53,52 @@ export class ListalugarComponent implements AfterViewInit, OnInit {
   private trackUserLocation(): void {
     if (navigator.geolocation) {
       navigator.geolocation.watchPosition((position) => {
-        const lat = position.coords.latitude;
-        const lng = position.coords.longitude;
+        const localUser = new L.LatLng(position.coords.latitude, position.coords.longitude);
 
-        // Actualizar o agregar el marcador en la ubicación del usuario
-        // if (this.userMarker) {
-        //   this.userMarker.setLatLng([lat, lng]);
-        // } else {
-        //   this.userMarker = L.marker([lat, lng]).addTo(this.map)
-        //     .bindPopup('Aquí andas jsjs')
-        //     .openPopup();
-        // }
+        const userMarker = L.marker(localUser).addTo(this.map);
+        userMarker.bindPopup('Aqui estas tu');
 
-        // Guardar la ubicación actual
-        this.userLatLng = L.latLng(lat, lng);
+        const hotelCielo = L.latLng(21.160063, -100.940102); // ? Hotel Cielito lindo
+        const hotelSpa = L.latLng(21.154696, -100.925697);// ? Hotel Spa
+        const hotelPosadaCampanas = L.latLng(21.169065, -100.935974); // ? Hotle posada las campanas
+        const hotelAnber = L.latLng(21.157530, -100.933060); // ? Hotel anber
+        const hotelRelicario = L.latLng(21.155169, -100.924240); // ? Hotel Relicario
+        const hotelSanDiego = L.latLng(21.162374, -100.938683); // ? Hotel San Diego
+        const hotelCasaMexico = L.latLng(21.158813, -100.933578); // ? Hotel Casa Mexico
+        const hotelTresRaices = L.latLng(21.087433, -100.798409); // ?hotel tres raices
+        const hotelRefugio = L.latLng(21.156733, -100.933830); // ? Hotel Refugio
+        const cabañasNogales = L.latLng(21.175854, -100.959831); // ? Cabañas los nogales
+        const hotelZanys = L.latLng(21.154634, -100.937126); // ? Hotel el jazmín de Zanya
+        const hotelRayo = L.latLng(21.158024, -100.932785); // ? Hotel casa pozo del rayo
+        const posadaBernardino = L.latLng(21.186563, -100.888329); // ? Posada de San Beranardiño
+        const hotelHidalgo = L.latLng(21.155924, -100.935646); // ? Hotel Hidalgo
 
-        // Centrar el mapa en la ubicación del usuario
-        this.map.setView([lat, lng], 13);
+        userMarker.openPopup;
 
-        // Volver a agregar la ruta si ya existe la ubicación del usuario
-        this.initMap(); // Recalcular la ruta con la ubicación actual
+        L.Routing.control({
+          waypoints: [
+            localUser,
+            hotelCielo,
+            hotelSpa,
+            hotelPosadaCampanas,
+            hotelAnber,
+            hotelRelicario,
+            hotelSanDiego,
+            hotelCasaMexico,
+            hotelTresRaices,
+            hotelRefugio,
+            cabañasNogales,
+            hotelZanys,
+            hotelRayo,
+            posadaBernardino,
+            hotelHidalgo
+          ],
+          addWaypoints: false,
+          show: false,
+          showAlternatives: false,
+          routeWhileDragging: false,
+        }).addTo(this.map);
+
       }, (error) => {
         console.error('Error obteniendo la ubicación: ', error);
       });
@@ -86,17 +110,9 @@ export class ListalugarComponent implements AfterViewInit, OnInit {
   private initMap(): void {
     // Crear el mapa centrado en la ubicación
     this.map = L.map('map').setView([21.1561, -100.9310], 13);
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
     }).addTo(this.map);
-
-    // Verificar si la ubicación del usuario está disponible antes de agregar la ruta
-      L.Routing.control({
-        waypoints: [
-          L.latLng(20.915296, -100.744232),  // Ubicación del usuario
-          L.latLng(21.160063, -100.940102)  // Hotel Cielito lindo
-        ]
-      }).addTo(this.map);  // Agregar la ruta al mapa
-    }
+  }
 }

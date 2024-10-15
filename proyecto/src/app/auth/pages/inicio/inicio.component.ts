@@ -25,7 +25,7 @@ export class InicioComponent implements AfterViewInit, OnInit {
   }
 
   private initMap(): void {
-    this.map = L.map('map').setView([21.1561, -100.9310], 13);
+    this.map = L.map('map').setView([21.160063, -100.940102], 13);
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
       maxZoom: 19,
       attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
