@@ -161,63 +161,6 @@ body {
   padding: 2%;
 }
 
-.login-prompt {
-  text-align: center;
-  margin-top: 50px;
-  padding: 20px;
-  background-color: #f9f9f9;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.login-title {
-  font-size: 2rem;
-  color: #3a3739; 
-  font-family: Trebuchet MS (sans-serif);
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.login-description {
-  font-size: 1.2rem;
-  color: #333;
-  margin-bottom: 30px;
-  font-family: Trebuchet MS (sans-serif);
-}
-
-.fb-login-button {
-  background-color: #4267B2;
-  color: white;
-  border: none;
-  padding: 15px 30px;
-  font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-right: 10px; 
-}
-
-.fb-login-button:hover {
-  background-color: #365899; 
-}
-
-.ig-login-button {
-  background-color: #E1306C; 
-  color: white;
-  border: none;
-  padding: 15px 30px;
-  font-size: 1rem;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  margin-left: 10px; 
-}
-
-.ig-login-button:hover {
-  background-color: #C13584; 
-}
-
-
 /* FEED DE INSTAGRAM 
 
 
