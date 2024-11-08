@@ -1,9 +1,9 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 import { Paquete } from '../../interfaces/paquete.interface';
 import { PaquetesService } from '../../services/paquete.service';
 import { ActivatedRoute, Router } from '@angular/router';
 import { switchMap } from 'rxjs';
-import * as L from 'leaflet';
+declare var paypal: any;  //Se utiliza la constante de PayPal
 
 @Component({
   selector: 'app-infopaq',
@@ -11,6 +11,15 @@ import * as L from 'leaflet';
   styleUrls: ['./infopaq.component.css']
 })
 export class InfopaqComponent implements OnInit {
+  @ViewChild('paypal', { static: true })
+  paypalElement!: ElementRef;
+
+  producto = {
+    descripcion: 'producto en venta',
+    precio: 1000.00,
+    img: 'imagen del producto'
+  }
+  title = 'angular-paypal-payment';
 
   // private map:any;
   // private userMarker: L.Marker<any> | undefined;
@@ -34,20 +43,28 @@ export class InfopaqComponent implements OnInit {
         console.log(paquete);
         return;
       })
+      paypal
+      .Buttons({
+        createOrder: (data: any, actions: { order: { create: (arg0: { purchase_units: { description: string; amount: { currency_code: string; value: number; }; }[]; }) => any; }; }) => {
+          return actions.order.create({
+            purchase_units: [{
+              description: this.producto.descripcion,
+              amount: {
+                currency_code: 'MXN',
+                value: this.producto.precio
+              }
+            }
+            ]
+          })
+        },
+        onApprove: async (data: any, actions: { order: { capture: () => any; }; }) => {
+          const order = await actions.order.capture();
+          console.log(order);
+        }
+      })
+      .render(this.paypalElement.nativeElement);
   }
   goBack():void{
     this.router.navigateByUrl('/auth/paquetes')
   }
-
-  // ngAfterViewInit(): void {
-  //   // Retrasar la inicialización del mapa para asegurarse de que el DOM esté completamente listo
-  //   setTimeout(() => {
-  //     this.initMap();
-  //   }, 0);
-  // }
-
-  // private initMap(){
-  //   this.map = L.map('map').setView([-17.78629, -63.18117], 13);
-  //   L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(this.map);
-  // }
 }

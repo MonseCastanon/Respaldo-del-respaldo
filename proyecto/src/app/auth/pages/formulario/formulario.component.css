@@ -1,8 +1,12 @@
+body{
+  background: linear-gradient(0deg, #ffffff, #75b0e1) fixed; /*Color de fondo de la página*/
+}
+
 /* Estilo general del formulario */
 .container {
-  max-width: 90%; /* Establece el ancho máximo del contenedor principal */
+  max-width: 70%; /* Establece el ancho máximo del contenedor principal */
   margin: 0 auto; /* Centra el contenedor horizontalmente en la página */
-  background: #ffe2e2; /*Color de fondo de la página*/
+  background: #ffffff; /*Color de fondo de la página*/
   border-radius: 15px;
   padding: 20px;
   font-family: 'Century Gothic'; /* Fuente más formal */
@@ -13,9 +17,8 @@
 h1 {
   text-align: center;
   color: #333333;
-  font-size: 2.5em; /* Tamaño del texto ajustado para mayor formalidad */
+  font-size: 1.5em; /* Tamaño del texto ajustado para mayor formalidad */
   font-family: 'Century Gothic'; /* Fuente más formal para el encabezado */
-  text-shadow: 1px 1px #aaaaaa;
   margin-bottom: 20px; /* Espacio adicional debajo del título */
 }
 
@@ -61,7 +64,7 @@ select {
   border-radius: 5px;
   font-size: 1em;
   font-family: 'Century Gothic'; /* Fuente consistente con el contenedor */
-  transition: border-color 0.3s ease;
+  transition: border-color 0.6s ease;
 }
 
 input[type="text"]:focus,
@@ -70,11 +73,11 @@ input[type="tel"]:focus,
 input[type="number"]:focus,
 input[type="date"]:focus,
 select:focus {
-  border-color: #ff6347;
+  border-color: #000000;
+  transition: border-color 0.6s ease;
 }
 
 input[type="submit"] {
-  background-color: #cf6992; /* Color base en naranja */
   border: none;
   border-radius: 5px;
   color: #ffffff;
@@ -83,17 +86,14 @@ input[type="submit"] {
   font-size: 1.4em; /* Incrementa el tamaño de la fuente */
   display: block;
   margin: 30px auto 0; /* Separación del contenido previo y centrado */
-  text-shadow: 1px 1px #000000;
-  transition: background-color 0.3s ease, background-size 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Transiciones para el efecto hover */
-  background-image: linear-gradient(45deg, #cf6992, #ffffff); /* Gradiente inicial */
-  background-size: 200% 200%; /* Tamaño del gradiente para la transición */
+  transition: background-color 0.6s ease, background-size 0.6s ease, box-shadow 0.6s ease, transform 0.6s ease; /* Transiciones para el efecto hover */
+  background-image: linear-gradient(45deg, #a3a0a1, #c7c7c7); /* Gradiente inicial */
   background-position: right bottom; /* Posición inicial del gradiente */
 }
 
 input[type="submit"]:hover {
   background-position: left top; /* Posición del gradiente al hacer hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  transform: scale(1.05); /* Efecto de escala */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.29);
 }
 
 .form-row {
@@ -113,7 +113,7 @@ input[type="submit"]:hover {
 }
 
 .card-column {
-  background-color: #f9f9f9;
+  background-color: hsl(0, 0%, 94%);
   border-radius: 3px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -121,7 +121,7 @@ input[type="submit"]:hover {
 }
 
 .card-column:hover {
-  transform: scale(1.05);
+  transform: scale(1.0);
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 

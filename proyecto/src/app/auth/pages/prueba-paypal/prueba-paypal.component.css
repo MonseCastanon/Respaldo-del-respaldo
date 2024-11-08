@@ -1,0 +1,160 @@
+/* Estilos generales */
+body {
+    font-family: Century Gothic;
+    background: linear-gradient(0deg, #ffffff, #75b0e1) fixed; /*Color de fondo de la página*/
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h2 {
+    color: #003366; /* Azul oscuro */
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Contenedor del carrito */
+  .cart-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #e6f2ff; /* Azul claro */
+    border: 1px solid #99c2ff; /* Azul más oscuro */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 51, 102, 0.2);
+  }
+  
+  /* Productos disponibles */
+  .available-products,
+  .cart-items {
+    margin-bottom: 20px;
+  }
+  
+  .available-products div,
+  .cart-items div {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 1px solid #b3d1ff; /* Azul suave */
+  }
+  
+  .available-products div:last-child,
+  .cart-items div:last-child {
+    border-bottom: none;
+  }
+  
+  /* Botones de acción */
+  button {
+    background-color: #005bb5; /* Azul intenso */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #004080; /* Azul más oscuro */
+  }
+  
+  /* Total y PayPal */
+  .total {
+    text-align: right;
+    font-size: 18px;
+    color: #003366; /* Azul oscuro */
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  #paypal {
+    margin-top: 20px;
+    text-align: center;
+  }
+  
+  .product-container {
+    text-align: justify;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .product-image-container {
+    padding-top: 50px;
+    width: 40%;
+  }
+  
+  .product-info-container {
+    width: 60%;
+    padding-left: 20px;
+  }
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
+  
+  form {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  label, input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  label {
+    width: 30%;
+    padding-right: 10px;
+  }
+  input[type="text"] {
+    width: 70%;
+  }
+  
+  input[type="button"] {
+    background-color: #ff5722;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+  }
+  
+  input[type="text"][name="card-number"], input[type="text"][name="expiry-date"], input[type="text"][name="cvv"] {
+    width: 30%;
+  }
+  
+  
+  h1 {
+    margin-top: 0;
+  }
+  
+  .price {
+    color: #ff5722;
+    font-size: 1.5em;
+    font-weight: bold;
+  }
+  
+  /* Adaptación para dispositivos móviles */
+  @media (max-width: 600px) {
+    .cart-container {
+      padding: 15px;
+    }
+    button {
+      padding: 6px 10px;
+      font-size: 14px;
+    }
+  }
+
+  

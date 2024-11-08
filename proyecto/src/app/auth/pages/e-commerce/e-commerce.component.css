@@ -1,0 +1,142 @@
+* {
+    box-sizing: border-box;
+    font-family: Century Gothic;
+}
+
+body {
+    background: linear-gradient(0deg, #ffffff, #75b0e1) fixed;
+    /*Color de fondo de la página*/
+}
+
+.product-container {
+    text-align: justify;
+    max-width: 60%;
+    margin: 0 auto;
+    padding: 3%;
+    background-color: #1100ff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.product-image-container {
+    padding-top: 50px;
+    width: 40%;
+}
+
+.product-info-container {
+    width: 60%;
+    padding-left: 20px;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+label,
+input[type="text"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+}
+
+label {
+    width: 30%;
+    padding-right: 10px;
+}
+
+input[type="text"] {
+    width: 70%;
+}
+
+input[type="button"] {
+    background-color: #ff5722;
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+}
+
+input[type="text"][name="card-number"],
+input[type="text"][name="expiry-date"],
+input[type="text"][name="cvv"] {
+    width: 30%;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+h5 {
+    font-family: Century Gothic;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+img {
+    max-width: 200px;
+    max-height: 200px;
+}
+
+/* Botones de acción */
+button {
+    background-color: #4f99e2;
+    /* Azul intenso */
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.6);
+}
+
+h2 {
+    text-align: center;
+    font-family: Century Gothic;
+    font-weight: bold;
+    
+}
+
+/* Total y PayPal */
+.total {
+    text-align: right;
+    font-size: 18px;
+    color: #003366;
+    /* Azul oscuro */
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+#paypal {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.empty-message {
+    background-color: #7bc3ff97;
+    border-radius: 5px;
+    padding: 3%;
+}
+
+@media (max-width: 600px) {
+    .cart-container {
+        padding: 15px;
+    }
+
+    button {
+        padding: 6px 10px;
+        font-size: 14px;
+    }
+}

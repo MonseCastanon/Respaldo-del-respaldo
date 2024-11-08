@@ -1,29 +1,22 @@
 const md5 = require('md5');
 const jwt = require('jsonwebtoken');
 const nodemailer = require('nodemailer');
-
-const cors= require('cors');
-//Creacion de la API
-//Creacion de las instancias de lad dependencias instaladas
+const cors = require('cors');
 const express = require('express')
 const mysql = require('mysql2')
 const bodyParser = require('body-parser')
 
-//Se crea la app en express
 const app = express()
 
-//Uso de cors
 app.use(cors());
+app.use(express.json());
 
-//Configuración de la cabecera donde se solicita permita
-//peticiones de todos los sitios y todos los metodos que consuma la app
 app.use(function(req, res, next){
     res.setHeader('Access-control-Allow-Origin','*')
     res.setHeader('Access-control-Allow-Methods','*')
     next()
 })
 
-//En este punto se utiliza el bodyparser
 app.use(bodyParser.json())
 
 //Se configura el puerto a utilizar

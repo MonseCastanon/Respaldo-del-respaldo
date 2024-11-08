@@ -1,3 +1,7 @@
+body{
+  background: linear-gradient(0deg, #ffffff, #75b0e1) fixed; /*Color de fondo de la página*/
+}
+
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -12,7 +16,6 @@
 }
 
 h1{
-  margin-top: 5%;
   margin-left: 25px;
   font-family: Century Gothic;
   text-align: center;
@@ -40,6 +43,10 @@ mat-card-image {
 
 mat-card-content {
   flex: 1;
+}
+
+mat-divider{
+  padding: 2%;
 }
 
 /* Ajusta el ancho para pantallas más pequeñas si es necesario */

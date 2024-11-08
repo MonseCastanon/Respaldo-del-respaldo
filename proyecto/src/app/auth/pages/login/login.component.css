@@ -1,8 +1,6 @@
 /* Color de fondo del cuerpo */
 body {
-    margin-top: 5%;
-    background: linear-gradient(10deg, #DEA4A4, #ffffff); /*Color de fondo de la página*/
-    background-attachment: fixed; /*Estilo del color*/
+  background: linear-gradient(0deg, #ffffff, #75b0e1) fixed; /*Color de fondo de la página*/
 }
   .box{
     display: flex; /*Dónde colocar el contenedor (esquina, abajo, etc.)*/
@@ -55,8 +53,11 @@ body {
     font-size: 30px;
     display: flex;
     justify-content: center;
-    padding: 0 0 35px 0; 
-    margin-top: 40px;
+    margin-bottom: 10px;
+  }
+
+  .button {
+    font-family: Century Gothic;
   }
   
   /* Contenedor input */
@@ -110,11 +111,6 @@ body {
   .left{
     display: flex;
   }
-  /* olvidar contraseña style
-  label a{
-    color: black;
-    text-decoration: none;
-  } */
   
   /* Buscador */
   .container-input {

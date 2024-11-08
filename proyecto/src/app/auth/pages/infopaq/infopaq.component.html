@@ -1,45 +1,64 @@
-<ng-template #divLoading>
-  <mat-grid-list cols="1">
-    <mat-grid-tile>
-      <mat-spinner></mat-spinner>
-    </mat-grid-tile>
-  </mat-grid-list>
-</ng-template>
+<body>
+  <ng-template #divLoading>
+    <mat-grid-list cols="1">
+      <mat-grid-tile>
+        <mat-spinner></mat-spinner>
+      </mat-grid-tile>
+    </mat-grid-list>
+  </ng-template>
 
-
-<div *ngIf="paquete; else divLoading" class="grid p-2">
-  <mat-card class="col-12 sm:col-6">
+  <div *ngIf="paquete; else divLoading" class="fondo grid p-2">
     <h1>Paquete</h1>
-    <mat-card-header>
-      <mat-card-title>{{ paquete.nombre }}</mat-card-title>
-      <!-- <mat-card-subtitle> {{paquete.contacto }}</mat-card-subtitle> -->
-    </mat-card-header>
 
-    <img [src]="paquete | paqueteImage" [alt]="paquete.nombre" mat-card-image />
-  </mat-card>
+    <mat-card class="paquete-card">
 
-  <mat-card class="col-12 sm:col-6">
-    <mat-card-header>
-      <mat-card-title>Información</mat-card-title>
-      <mat-card-subtitle>{{ paquete.nombre }}</mat-card-subtitle>
-    </mat-card-header>
+      <img [src]="paquete | paqueteImage" [alt]="paquete.nombre" mat-card-image />
 
-    <mat-card-content>
-      <mat-list>
-        <p><b>Descripcion</b></p><div class="texto">{{paquete.descripcion}}</div><br>
-        <p><b>Hotel</b></p><div class="texto">{{paquete.hotel}}</div><br>
-        <p><b>Restaurante</b></p><div class="texto">{{paquete.restaurante}}</div><br>
-        <p><b>Experiencia</b></p><div class="texto">{{paquete.experiencia}}</div><br>
-        <p><b>Actividad</b></p><div class="texto">{{paquete.actividad}}</div><br>
-        <p><b>Costo</b></p><div class="texto">{{paquete.costo}}</div>
-      </mat-list>
+      <div class="mat-card-body">
+        <mat-card-header>
+          <mat-card-title>{{ paquete.nombre }}</mat-card-title>
+        </mat-card-header>
+        <mat-card-title>Información</mat-card-title>
+        <mat-card-subtitle>{{ paquete.nombre }}</mat-card-subtitle>
 
+        <mat-list>
+          <div class="info-section">
+            <p><b>Descripción:</b></p>
+            <div class="texto">{{paquete.descripcion}}</div>
+          </div>
 
-      <button mat-flat-button color="primary" (click)="goBack()">Regresar al listado</button>
-    </mat-card-content>
-  </mat-card>
+          <div class="info-section">
+            <p><b>Hotel:</b></p>
+            <div class="texto">{{paquete.hotel}}</div>
+          </div>
 
-  <div id="ubicacion">
-		<div id="map"></div>
-	</div>
-</div>
+          <div class="info-section">
+            <p><b>Restaurante:</b></p>
+            <div class="texto">{{paquete.restaurante}}</div>
+          </div>
+
+          <div class="info-section">
+            <p><b>Experiencia:</b></p>
+            <div class="texto">{{paquete.experiencia}}</div>
+          </div>
+
+          <div class="info-section">
+            <p><b>Actividad:</b></p>
+            <div class="texto">{{paquete.actividad}}</div>
+          </div>
+
+          <div class="info-section">
+            <p><b>Costo:</b></p>
+            <div class="texto">{{paquete.costo}}</div>
+          </div>
+        </mat-list>
+
+        <div class="button-group">
+          <button mat-flat-button color="primary" (click)="goBack()">Regresar al listado</button><br><br>
+          <button mat-flat-button style="background-color: rgb(54, 194, 54);" [routerLink]="['/auth/e-commerce']"
+            routerLinkActive="active">Comprar</button>
+        </div>
+      </div>
+    </mat-card>
+  </div>
+</body>

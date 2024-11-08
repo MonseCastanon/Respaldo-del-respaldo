@@ -1,7 +1,45 @@
 mat-toolbar {
   transition: background-color 0.3s ease, background-size 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Transiciones para el efecto hover */
-
-  background-color: #DEA4A4;
+  color: #000000;
+  background-color: #80b9e7;
   font-family: Century Gothic;
 }
 
+mat-nav-list{
+  background: linear-gradient(0deg, #ffffff, #82b8e3); /*Color de fondo de la lista de navbar*/
+}
+
+mat-sidenav-container{
+  box-shadow: 200px;
+}
+
+mat-divider{
+  padding: 2%;
+}
+
+span{
+  font-size: 18px;
+}
+
+img {
+  max-width: 30px; 
+  border-radius: 50%; 
+  margin-top: 1%; 
+  margin-left: 1%;
+}
+
+.fb {
+  background-color: #3b5998;
+  font-size: 15px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 12px;
+  cursor: pointer;
+  transition: box-shadow 0.5s ease;
+}
+
+.fb:hover {
+  box-shadow: 1px 5px 7px 1px rgba(0, 0, 0, 0.6);
+  transition: box-shadow 0.5s ease;
+}

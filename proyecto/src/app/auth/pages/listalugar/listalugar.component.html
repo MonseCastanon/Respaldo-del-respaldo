@@ -1,29 +1,25 @@
+<body>
+  <h1><mat-icon>place</mat-icon>    Hoteles</h1>
 
-<br>
-<h1>Hoteles</h1>
-<mat-divider></mat-divider>
-
-<mat-divider></mat-divider>
-
-<div id="ubicacion">
-  <div id="map" style="height: 200px; width: 50%; margin: 5%"></div>
-</div>
-
-<div class="grid bm-8">
-  <div *ngFor="let hotel of hoteles"
-  class="col-12 sm:col-4 md:col-3 xl:col-2">
-    <hoteles-hotel-card [hotel]="hotel"></hoteles-hotel-card>
-<!-- Llama al card.component.ts -->
+  <div id="ubicacion">
+    <div id="map" style="height: 350px; width: 70%; margin: 5%"></div>
   </div>
-</div>
 
-<h1>Restaurantes</h1>
-
-<mat-divider></mat-divider>
-<div class="grid bm-8">
-  <div *ngFor="let restaurante of restaurantes"
-  class="col-12 sm:col-4 md:col-3 xl:col-2">
-    <restaurantes-restaurante-card [restaurante]="restaurante"></restaurantes-restaurante-card>
-<!-- Llama al card.component.ts -->
+  <div class="grid bm-8">
+    <div *ngFor="let hotel of hoteles" class="col-12 sm:col-4 md:col-3 xl:col-2">
+      <hoteles-hotel-card [hotel]="hotel"></hoteles-hotel-card>
+      <!-- Llama al card.component.ts -->
+    </div>
   </div>
-</div>
+
+  <mat-divider></mat-divider>
+
+  <h1><mat-icon>place</mat-icon>    Restaurantes</h1>
+
+  <div class="grid bm-8">
+    <div *ngFor="let restaurante of restaurantes" class="col-12 sm:col-4 md:col-3 xl:col-2">
+      <restaurantes-restaurante-card [restaurante]="restaurante"></restaurantes-restaurante-card>
+      <!-- Llama al card.component.ts -->
+    </div>
+  </div>
+</body>

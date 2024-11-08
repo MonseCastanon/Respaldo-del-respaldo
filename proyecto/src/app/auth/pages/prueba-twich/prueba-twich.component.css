@@ -1,0 +1,38 @@
+.inicio {
+  background: linear-gradient(0deg, #ffffff, #75b0e1) fixed; /*Color de fondo de la página*/
+  text-align: left;
+  font-family: Century Gothic;
+}
+
+button {
+  background-color: #6441a5;
+  font-size: 15px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  margin: 1%;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+img {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  margin-top: 10px;
+  margin-left: 20px;
+}
+
+.twitch-player {
+  margin-top: 20px;
+}
+
+
+p {
+  font-family: Century Gothic;
+  font-weight: bold;
+  text-align: center;
+  font-size: 26px;
+  margin: 20px 0;
+}

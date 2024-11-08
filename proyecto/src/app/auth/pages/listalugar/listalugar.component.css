@@ -1,3 +1,7 @@
+body{
+  background: linear-gradient(0deg, #ffffff, #75b0e1) fixed; /*Color de fondo de la página*/
+}
+
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -9,6 +13,10 @@
   flex: 1 1 calc(33.333% - 20px); /* Calcula el ancho de cada tarjeta considerando el margen */
   margin-bottom: 20px; /* Espacio inferior entre las filas de tarjetas */
   box-sizing: border-box; /* Asegura que el padding y el borde se incluyan en el ancho */
+}
+
+.leaflet-routing-container {
+  display: none !important;
 }
 
 h1{
@@ -41,6 +49,10 @@ mat-card-content {
   flex: 1;
 }
 
+mat-divider{
+  padding: 2%;
+}
+
 /* Ajusta el ancho para pantallas más pequeñas si es necesario */
 @media (max-width: 768px) {
   .grid .col-12 {
@@ -68,4 +80,7 @@ mat-card-content {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+.wayponts .addWaypoints {
+  z-index: -99999;
 }

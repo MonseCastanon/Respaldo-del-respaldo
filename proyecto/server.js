@@ -31,6 +31,35 @@ const Agencia = sequelize.define(
   }
 );
 
+async function sendMessage() {
+  const input = document.getElementById('chat-input');
+  const output = document.getElementById('chat-output');
+  const userMessage = input.value;
+
+  // Muestra el mensaje del usuario en el chat
+  output.innerHTML += `<p><strong>Tú:</strong> ${userMessage}</p>`;
+  input.value = '';
+
+  // Llama al backend
+  try {
+      const response = await fetch('/api/chat', {
+          method: 'POST',
+          headers: {
+              'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ message: userMessage })
+      });
+      const data = await response.json();
+      output.innerHTML += `<p><strong>ChatGPT:</strong> ${data.reply}</p>`;
+  } catch (error) {
+      output.innerHTML += `<p><strong>ChatGPT:</strong> Error al obtener respuesta</p>`;
+  }
+
+  // Baja automáticamente al último mensaje
+  output.scrollTop = output.scrollHeight;
+}
+
+
 app.post("/api/enviar-correo", async (req, res) => {
   const { hoteles, restaurantes, culturales, agencia } = req.body;
 
@@ -79,48 +108,3 @@ app.post("/api/enviar-correo", async (req, res) => {
 app.listen(3001, () => {
   console.log("Servidor escuchando en el puerto 3001");
 });
-
-// JS de Instagram
-
-// ("use strict");
-
-// const galery = document.querySelector(".galery");
-// const feed = document.querySelector(".contenedor-galery");
-// const next = document.querySelector("#next");
-// const prev = document.querySelector("#prev");
-
-// const tokenIG = "AQUÍ-PONEMOS-TOKEN-DE-PÁGINA";
-// const url = `https://graph.instagram.com/media?fields=thumbnail_url,media_url,caption,permalink&limit=80&access_token=${tokenIG}"   
-// =${TOKEN}`;
-
-// fetch(url)
-//   .then((res) => res.json())
-//   .then((data) => CrearHtml(data.data));
-
-// function CrearHtml() {
-//   for (const img of data) {
-//     galery.innerHTML += `
-//       <div class="image overflow">
-//       <img loading=laz" src="${img.media_url}" alt="">
-//       <div class="opacy-hover">
-//       <a href="${img.permalink}" class="caption">
-//       <p>
-//       ${img.caption}.slice(0, 100)
-//       </p>
-//       </a>
-//       </div>
-//       </div>
-// `;
-//   }
-// }
-
-next.addEvenListener("click", moveGalery);
-prev.addEvenListener("click", moveGalery);
-
-function moveGalery(e) {
-  if (e.target.id == "next" || e.target.parentElement.id == "next") {
-    feed.scrollLeft += feed.offsetWidth;
-  } else {
-    feed.scrollLeft -= feed.offsetWidth;
-  }
-}

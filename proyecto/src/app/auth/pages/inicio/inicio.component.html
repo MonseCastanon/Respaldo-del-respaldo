@@ -3,6 +3,45 @@
 		<p>CONOCE LA CIUDAD DE DOLORES HIDALGO C.I.N.</p>
 	</div>
 
+	<!-- Inicia Clima -->
+	<div class="weather-content">
+	<button class="weather mdi mdi-weather-cloudy" (click)="toggleWeather()"> Ver Clima</button>
+
+	<!-- Ventana emergente para mostrar el clima -->
+	<div *ngIf="showWeather" class="weather-modal">
+		<div class="modal-content">
+			<button (click)="toggleWeather()" class="close-button">X</button>
+			<h2>Clima en {{ weatherData?.name }}</h2>
+			<p>Temperatura: {{ weatherData?.main?.temp }}°C</p>
+			<p>Humedad: {{ weatherData?.main?.humidity }}%</p>
+			<p>Descripción: {{ weatherData?.weather[0]?.description }}</p>
+		</div>
+	</div>
+</div>
+
+	<div class="imagenes">
+		<img src="https://th.bing.com/th/id/R.66b3b5c4fd0e0ad1293b1354f40c3ff3?rik=h6XzxGH5u6xKJw&pid=ImgRaw&r=0"
+			alt="Feria de las nieves">
+		<img src="https://th.bing.com/th/id/OIP.x0-kRww-7U3fCNL9qJKtUwHaE8?rs=1&pid=ImgDetMain"
+			alt="Calle de Dolores Hidalgo">
+		<img src="https://th.bing.com/th/id/R.de5a78f72577585737127c4b6368395b?rik=pUzHzBTEaHZnJg&pid=ImgRaw&r=0"
+			alt="Museo de Dolores Hidalgo">
+		<img src="https://th.bing.com/th/id/OIP.ocPyjX1OsWjnIL3MJE6hegAAAA?rs=1&pid=ImgDetMain"
+			alt="Feria de las nieves">
+	</div>
+
+	<div class="twitch-stream-container">
+		<button (click)="toggleTwitchStream()" class="toggle-button mdi mdi-twitch">
+			{{ isTwitchVisible ? ' Cerrar Transmisión' : ' Ver Transmisión en Twitch' }}
+		</button>
+
+
+		<div *ngIf="isTwitchVisible" class="twitch-container">
+			<iframe width="640" height="360" [src]="twitchUrl" frameborder="0" allowfullscreen="true" scrolling="no"
+				allow="autoplay; fullscreen"></iframe>
+		</div>
+	</div>
+
 	<div class="presentacion">
 		<p>
 			ESTE PUEBLO MÁGICO ES PATRIMONIO HISTÓRICO Y CUNA DE LA INDEPENDENCIA. PRESERVA SECRETOS, COMO LA CATEDRAL,
@@ -17,21 +56,10 @@
 		</p>
 	</div>
 
+
 	<div id="titleMap">
-		<p>Ubicación</p><mat-icon>arrow_downward</mat-icon>
+		<p>Ubicación</p> <mat-icon>location_on</mat-icon>
 	</div>
-
 	<div id="ubicacion">
-		<div id="map" style="height: 200px; width: 50%"></div>
-	</div>
-
-	<!-- INICIAN IMÁGENES -->
-	<div class="imagenes">
-		<img src="https://th.bing.com/th/id/R.66b3b5c4fd0e0ad1293b1354f40c3ff3?rik=h6XzxGH5u6xKJw&pid=ImgRaw&r=0"
-			alt="Feria de las nieves">
-		<img src="https://th.bing.com/th/id/OIP.x0-kRww-7U3fCNL9qJKtUwHaE8?rs=1&pid=ImgDetMain"
-			alt="Calle de Dolores Hidalgo">
-		<img src="https://th.bing.com/th/id/R.de5a78f72577585737127c4b6368395b?rik=pUzHzBTEaHZnJg&pid=ImgRaw&r=0"
-			alt="Museo de Dolores Hidalgo">
-		<img src="https://th.bing.com/th/id/OIP.ocPyjX1OsWjnIL3MJE6hegAAAA?rs=1&pid=ImgDetMain"
-			alt="Feria de las nieves">
+		<div id="map" style="height: 350px; width: 70%"></div>
+	</div><br><br>

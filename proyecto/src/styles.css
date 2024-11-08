@@ -1,8 +1,13 @@
-/* You can add global styles to this file, and also import other style files */
-
 html, body { height: 100%; }
 body { margin: 0; font-family: Century Gothic; }
 
 .spacer{
     flex: 1 1 auto;
+}
+
+/* Negar el panel encima del mapa */
+.leaflet-routing-container h2,
+.leaflet-routing-container h3,
+.leaflet-routing-container td {
+  display: none !important;
 }

@@ -3,7 +3,7 @@
     <mat-card-title> {{ paquete.nombre }} </mat-card-title>
   </mat-card-header>
 
-    <img mat-card-image [src]="paquete | paqueteImage" [alt]="paquete.nombre">
+    <img mat-card-image style="min-height: 40%;" [src]="paquete | paqueteImage" [alt]="paquete.nombre">
 
 
     <mat-card-content class="mt-2">
@@ -22,10 +22,6 @@
       </p>
     </mat-card-content>
 
-    <!-- <div id="ubicacion">
-      <div id="map" style="height: 200px; width: 50%"></div>
-    </div> -->
-
 <br>
   <mat-divider></mat-divider>
   <mat-card-actions>
@@ -33,5 +29,6 @@
       <mat-icon>more_horiz</mat-icon>
       Más
     </button>
+    <button mat-flat-button style="background-color: rgb(54, 194, 54); margin-left: 20px;" [routerLink]="['/auth/e-commerce']" routerLinkActive="active">Comprar</button>
   </mat-card-actions>
 </mat-card>

@@ -1,8 +1,15 @@
-mat-toolbar {
+/* mat-toolbar {
   background-color: black;
   display: flex;
   justify-content: space-between;
   gap: 30px;
+} */
+
+mat-toolbar {
+  transition: background-color 0.3s ease, background-size 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Transiciones para el efecto hover */
+  color: #000000;
+  background-color: #98c4e7;
+  font-family: Century Gothic;
 }
 
 mat-toolbar-button {
@@ -13,3 +20,7 @@ mat-toolbar-button:last-child {
   margin-right: 15px;
 }
 
+mat-nav-list{
+  background: linear-gradient(0deg, #ffffff, #98c4e7);
+  background-position: fixed; /*Color de fondo de la página*/
+}

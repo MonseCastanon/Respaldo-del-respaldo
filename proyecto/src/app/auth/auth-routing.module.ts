@@ -16,12 +16,19 @@ import { OlvidarpassComponent } from './pages/olvidarpass/olvidarpass.component'
 import { InforesComponent } from './pages/infores/infores.component';
 import { ListalugarComponent } from './pages/listalugar/listalugar.component';
 import { InfoitiComponent } from './pages/infoiti/infoiti.component';
-
+import { ECommerceComponent } from './pages/e-commerce/e-commerce.component';
+import { PruebaPaypalComponent } from './pages/prueba-paypal/prueba-paypal.component';
+import { BusquedaComponent } from './pages/busqueda/busqueda.component';
+// import { PruebaTwichComponent } from './pages/prueba-twich/prueba-twich.component';
 const routes: Routes = [
   {
     path: '',
     component: LayoutPageComponent,
     children:[
+      { path: 'e-commerce', component: ECommerceComponent },
+      { path: 'bing', component: BusquedaComponent },
+      // { path: 'prueba-twich', component: PruebaTwichComponent},
+      { path: 'prueba-paypal', component: PruebaPaypalComponent },
       { path: 'experiencias', component: ExperienciasComponent },
       { path: 'atractivos/:id', component: InfoatraComponent },
       { path: 'listalugar', component: ListalugarComponent },

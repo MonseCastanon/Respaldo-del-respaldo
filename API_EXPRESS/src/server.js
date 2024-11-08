@@ -9,6 +9,26 @@ const port = 3001;
 app.use(bodyParser.json());
 app.use(cors());
 
+app.post('/api/chat', async (req, res) => {
+  const { message } = req.body;
+
+  try {
+      const response = await axios.post('https://api.openai.com/v1/engines/gpt-4/completions', {
+          prompt: message,
+          max_tokens: 100,
+          temperature: 0.5,
+      }, {
+          headers: {
+              'Authorization': `Bearer YOUR_OPENAI_API_KEY`,
+              'Content-Type': 'application/json'
+          }
+      });
+      res.json({ reply: response.data.choices[0].text });
+  } catch (error) {
+      res.status(500).send('Error in OpenAI API call');
+  }
+});
+
 app.post('/api/email', async (req, res) => {
   try {
     const { nombre, correo, telefono, dias, noches, adultos, ninos, fechaInicial, transporte, hoteles, restaurantes, atractivos, agenciaCorreo } = req.body;
@@ -20,7 +40,7 @@ app.post('/api/email', async (req, res) => {
     console.log('Datos recibidos:', req.body);
 
     const mailOptions = {
-      from: 'explora.dolores.hidalgo@gmail.com',
+      from: 'monsecastanon023@gmail.com',
       to: agenciaCorreo,
       subject: 'Solicitud de Paquete Turístico Personalizado',
       text: `
@@ -46,8 +66,8 @@ app.post('/api/email', async (req, res) => {
     const transporter = nodemailer.createTransport({
       service: 'gmail',
       auth: {
-        user: 'explora.dolores.hidalgo@gmail.com',
-        pass: 'mzvyaekzrgbzjvyp' // Nueva contraseña de aplicación
+        user: 'monsecastanon023@gmail.com',
+        pass: 'mon140104' // Nueva contraseña de aplicación
       }
     });
 

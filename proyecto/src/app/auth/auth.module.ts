@@ -37,8 +37,11 @@ import { ExperienciaImagePipe } from './pipes/experiencia-image.pipe';
 import { FormsModule } from '@angular/forms';
 import { PersonalizadoAtractivoComponent } from './components/card/personalizado-atractivo/personalizado-atractivo.component';
 import { InfoitiComponent } from './pages/infoiti/infoiti.component';
-
-
+import { ECommerceComponent } from './pages/e-commerce/e-commerce.component';
+import { PruebaPaypalComponent } from './pages/prueba-paypal/prueba-paypal.component'; 
+import { NgxPayPalModule } from 'ngx-paypal';
+import { BusquedaComponent } from './pages/busqueda/busqueda.component';
+// import { PruebaTwichComponent } from './pages/prueba-twich/prueba-twich.component';
 
 @NgModule({
   declarations: [
@@ -76,13 +79,17 @@ import { InfoitiComponent } from './pages/infoiti/infoiti.component';
     ListalugarComponent,
     PersonalizadoAtractivoComponent,
     InfoitiComponent,
-
+    ECommerceComponent,
+    PruebaPaypalComponent,
+    BusquedaComponent,
+    // PruebaTwichComponent,
   ],
   imports: [
     CommonModule,
     AuthRoutingModule,
     MaterialModule,
-    FormsModule
+    FormsModule,
+    NgxPayPalModule
   ]
 })
 export class AuthModule { }

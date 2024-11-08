@@ -1,0 +1,358 @@
+<body>
+    <br />
+
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-8">
+                <div class="card border shadow-none">
+                    <div class="card-body">
+                        <div class="d-flex align-items-start border-bottom pb-3">
+                            <div class="me-4">
+                                <img src="https://static.wixstatic.com/media/94f4c4_dbb4175a19fb43d5b877acfe7657e5f8~mv2.jpg/v1/fill/w_980,h_964,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/94f4c4_dbb4175a19fb43d5b877acfe7657e5f8~mv2.jpg"
+                                    alt="" class="avatar-lg rounded" />
+                            </div>
+                            <div class="flex-grow-1 align-self-center overflow-hidden">
+                                <div>
+                                    <h5 class="text-truncate font-size-18">
+                                        <a href="#" class="text-dark">Turismo</a>
+                                    </h5>
+                                    <p class="text-muted mb-0">
+                                        <i class="bx bxs-star text-warning"></i>
+                                        <i class="bx bxs-star text-warning"></i>
+                                        <i class="bx bxs-star text-warning"></i>
+                                        <i class="bx bxs-star text-warning"></i>
+                                        <i class="bx bxs-star-half text-warning"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="mt-3">
+                                    <p class="text-muted mb-2">Precio</p>
+                                    <h5 class="mb-0 mt-2">
+                                        <span class="text-muted me-2"><del
+                                                class="font-size-16 fw-normal">$1,100</del></span>$1,000
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="mt-3">
+                                    <div *ngFor="let item of turismo">
+                                        <button class="agregar mdi mdi-plus-circle-outline" (click)="addToCart(item)">
+                                            Agregar al carrito
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end card -->
+
+                <div class="card border shadow-none">
+                    <div class="card-body">
+                        <div class="d-flex align-items-start border-bottom pb-3">
+                            <div class="me-4">
+                                <img src="https://elsouvenir.com/wp-content/uploads/2014/10/Centro-de-Dolores.-Creditos-diario-de-finanzas..jpg"
+                                    alt="" class="avatar-lg rounded" />
+                            </div>
+                            <div class="flex-grow-1 align-self-center overflow-hidden">
+                                <div>
+                                    <h5 class="text-truncate font-size-18">
+                                        <a href="#" class="text-dark">Ecoadventure</a>
+                                    </h5>
+                                    <p class="text-muted mb-0">
+                                        <i class="bx bxs-star text-warning"></i>
+                                        <i class="bx bxs-star text-warning"></i>
+                                        <i class="bx bxs-star text-warning"></i>
+                                        <i class="bx bxs-star text-warning"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="mt-3">
+                                    <p class="text-muted mb-2">Precio</p>
+                                    <h5 class="mb-0 mt-2">
+                                        <span class="text-muted me-2"><del
+                                                class="font-size-16 fw-normal">$13,000</del></span>$12,500
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="mt-3">
+                                    <div *ngFor="let item of ecoadventure">
+                                        <button class="agregar mdi mdi-plus-circle-outline" (click)="addToCart(item)">
+                                            Agregar al carrito
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end card -->
+
+                <div class="card border shadow-none">
+                    <div class="card-body">
+                        <div class="d-flex align-items-start border-bottom pb-3">
+                            <div class="me-4">
+                                <img src="https://tipsparatuviaje.com/wp-content/uploads/2016/11/Dolores-hidalgo-guanajuato-608x608.jpg"
+                                    alt="" class="avatar-lg rounded" />
+                            </div>
+                            <div class="flex-grow-1 align-self-center overflow-hidden">
+                                <div>
+                                    <h5 class="text-truncate font-size-18">
+                                        <a href="#" class="text-dark">Enoturismo</a>
+                                    </h5>
+                                    <p class="text-muted mb-0">
+                                        <i class="bx bxs-star text-warning"></i>
+                                        <i class="bx bxs-star text-warning"></i>
+                                        <i class="bx bxs-star text-warning"></i>
+                                        <i class="bx bxs-star text-warning"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="mt-3">
+                                    <p class="text-muted mb-2">Precio</p>
+                                    <h5 class="mb-0 mt-2">
+                                        <span class="text-muted me-2"><del
+                                                class="font-size-16 fw-normal">$275,000</del></span>$269,999
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="mt-3">
+                                    <div *ngFor="let item of enoturismo">
+                                        <button class="agregar mdi mdi-plus-circle-outline" (click)="addToCart(item)">
+                                            Agregar al carrito
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end card -->
+
+                <div class="card border shadow-none">
+                    <div class="card-body">
+                        <div class="d-flex align-items-start border-bottom pb-3">
+                            <div class="me-4">
+                                <img src="https://i.pinimg.com/236x/ab/73/f5/ab73f5e9fdb95683aa416ee049a0d5f3.jpg?nii=t"
+                                    alt="" class="avatar-lg rounded" />
+                            </div>
+                            <div class="flex-grow-1 align-self-center overflow-hidden">
+                                <div>
+                                    <h5 class="text-truncate font-size-18">
+                                        <a href="#" class="text-dark">Xopantla Aulex</a>
+                                    </h5>
+                                    <p class="text-muted mb-0">
+                                        <i class="bx bxs-star text-warning"></i>
+                                        <i class="bx bxs-star text-warning"></i>
+                                        <i class="bx bxs-star text-warning"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="mt-3">
+                                    <p class="text-muted mb-2">Precio</p>
+                                    <h5 class="mb-0 mt-2">
+                                        <span class="text-muted me-2"><del
+                                                class="font-size-16 fw-normal">$7,500</del></span>$7,000
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="mt-3">
+                                    <div *ngFor="let item of xopantlaAulex">
+                                        <button class="agregar mdi mdi-plus-circle-outline" (click)="addToCart(item)">
+                                            Agregar al carrito
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end card -->
+
+                <div class="card border shadow-none">
+                    <div class="card-body">
+                        <div class="d-flex align-items-start border-bottom pb-3">
+                            <div class="me-4">
+                                <img src="https://www.mexicanisimo.com.mx/wp-content/uploads/2020/07/DOLORES-.jpg"
+                                    alt="" class="avatar-lg rounded" />
+                            </div>
+                            <div class="flex-grow-1 align-self-center overflow-hidden">
+                                <div>
+                                    <h5 class="text-truncate font-size-18">
+                                        <a href="#" class="text-dark">Viaje al Alma Dolores</a>
+                                    </h5>
+                                    <p class="text-muted mb-0">
+                                        <i class="bx bxs-star text-warning"></i>
+                                        <i class="bx bxs-star text-warning"></i>
+                                        <i class="bx bxs-star text-warning"></i>
+                                        <i class="bx bxs-star text-warning"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="mt-3">
+                                    <p class="text-muted mb-2">Precio</p>
+                                    <h5 class="mb-0 mt-2">
+                                        <span class="text-muted me-2"><del
+                                                class="font-size-24 fw-normal">$7,000</del></span>$6,300
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="mt-3">
+                                    <div *ngFor="let item of almaDolores">
+                                        <button class="agregar mdi mdi-plus-circle-outline" (click)="addToCart(item)">
+                                            Agregar al carrito
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end card -->
+
+                <div class="card border shadow-none">
+                    <div class="card-body">
+                        <div class="d-flex align-items-start border-bottom pb-3">
+                            <div class="me-4">
+                                <img src="https://th.bing.com/th/id/OIP.fatkp0LwgUR37mjoyBs1CQHaFn?rs=1&pid=ImgDetMain"
+                                    alt="" class="avatar-lg rounded" />
+                            </div>
+                            <div class="flex-grow-1 align-self-center overflow-hidden">
+                                <div>
+                                    <h5 class="text-truncate font-size-18">
+                                        <a href="#" class="text-dark">Cuna de Amor</a>
+                                    </h5>
+                                    <p class="text-muted mb-0">
+                                        <i class="bx bxs-star text-warning"></i>
+                                        <i class="bx bxs-star text-warning"></i>
+                                        <i class="bx bxs-star text-warning"></i>
+                                        <i class="bx bxs-star text-warning"></i>
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="mt-3">
+                                    <p class="text-muted mb-2">Precio</p>
+                                    <h5 class="mb-0 mt-2">
+                                        <span class="text-muted me-2"><del
+                                                class="font-size-16 fw-normal">$16,950</del></span>$16,350
+                                    </h5>
+                                </div>
+                            </div>
+                            <div class="col-md-5">
+                                <div class="mt-3">
+                                    <div *ngFor="let item of CunaDeAmor">
+                                        <button class="agregar mdi mdi-plus-circle-outline" (click)="addToCart(item)">
+                                            Agregar al carrito
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- end card -->
+
+                <div class="row my-4">
+                    <div class="col-sm-6">
+                        <a routerLink="../paquetes/"
+                            class="btn btn-text-success btn-hover-light-success font-weight-bold mr-2">
+                            <button class="mdi mdi-arrow-left me-1">
+                                Continuar comprando
+                            </button></a>
+                    </div>
+                    <!-- end col -->
+                </div>
+                <!-- end row-->
+            </div>
+
+            <div class="col-xl-4">
+                <div class="mt-5 mt-lg-0">
+                    <div class="card border shadow-none">
+                        <div class="card-header bg-transparent border-bottom py-3 px-4">
+                            <h2 class="carrito mb-0">Carrito de Compras</h2>
+                        </div>
+                        <div class="card-body p-4 pt-2">
+                            <div class="cart-items" *ngIf="cartItems.length > 0; else emptyCart">
+                                <div *ngFor="let item of cartItems" class="cart-item">
+                                    <div class="item-info">
+                                        <p class="item-name">{{ item.name }}</p>
+                                        <p class="item-quantity">Cantidad: {{ item.quantity }}</p>
+                                        <p class="item-price">Precio: ${{ item.price }}</p>
+                                    </div>
+                                    <div class="item-actions">
+                                        <button class="remove-btn mdi mdi-delete" (click)="removeFromCart(item)">
+                                            Eliminar
+                                        </button>
+                                    </div>
+                                    <br />
+                                    <mat-divider></mat-divider>
+                                    <br>
+                                </div>
+                            </div>
+                            <tr>
+                                <th>Total :</th>
+                                <td class="text-end">
+                                    <span class="fw-bold">
+                                        {{ total | currency }}
+                                    </span>
+                                </td>
+                            </tr>
+
+                            <br>
+
+                            <ng-template #emptyCart>
+                                <p class="empty-message">Tu carrito está vacío.</p>
+                            </ng-template>
+
+                            <!-- <div #paypal></div> Contenedor de paypoal -->
+                            <ngx-paypal [config]="payPalConfig"></ngx-paypal>
+                            <mat-divider></mat-divider><br>
+                            <div *ngIf="purchaseDetails">
+                                <h2>Detalles de la Compra</h2>
+                                <mat-divider></mat-divider><br>
+                                <p><strong>ID de Transacción:</strong> {{ purchaseDetails.transactionId }}</p>
+                                <p><strong>Estado:</strong> {{ purchaseDetails.status }}</p>
+                                <p><strong>Paquete comprado:</strong> {{ purchaseDetails.packageName }}</p>
+                                <!-- <p><strong>Comprador:</strong> {{ purchaseDetails.payerName }}</p> -->
+                                <p><strong>Email del Comprador:</strong> {{ purchaseDetails.payerEmail }}</p>
+                                <p><strong>Monto:</strong> {{ purchaseDetails.amount }} {{ purchaseDetails.currency }}
+                                </p>
+
+                                <button (click)="clearPurchaseDetails()">Nueva compra</button>
+                            </div>
+                        </div>
+                        <!-- end table-responsive -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end row -->
+</body>

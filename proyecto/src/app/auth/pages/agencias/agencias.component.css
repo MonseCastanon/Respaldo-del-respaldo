@@ -1,5 +1,5 @@
 body {
-  z-index: -1;
+  background: linear-gradient(0deg, #ffffff, #75b0e1) fixed; /*Color de fondo de la página*/
 }
 
 .grid {

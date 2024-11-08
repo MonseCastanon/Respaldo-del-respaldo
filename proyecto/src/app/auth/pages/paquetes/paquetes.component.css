@@ -1,3 +1,7 @@
+body{
+  background: linear-gradient(0deg, #ffffff, #75b0e1) fixed; /*Color de fondo de la página*/
+}
+
 .grid {
   display: flex;
   flex-wrap: wrap;
@@ -6,7 +10,6 @@
 }
 
 h1{
-  margin-top: 5%;
   margin-left: 25px;
   font-family: Century Gothic;
   text-align: center;
@@ -41,6 +44,10 @@ mat-card-content {
   flex: 1;
 }
 
+mat-divider{
+  padding: 2%;
+}
+
 /* Ajusta el ancho para pantallas más pequeñas si es necesario */
 @media (max-width: 768px) {
   .grid .col-12 {
@@ -52,4 +59,15 @@ mat-card-content {
   .grid .col-12 {
     flex: 1 1 100%; /* 1 tarjeta por fila */
   }
+}
+
+.contenedor-paypal{
+  align-content:first baseline;
+  margin-right: 5%;
+}
+
+a {
+  font-family: Century Gothic;
+  text-align: center;
+  font-size: 18px;
 }

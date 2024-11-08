@@ -1,27 +1,41 @@
+// Instala nodemailer en tu proyecto
+// npm install nodemailer
+
 const express = require('express');
-const router = express.Router();
 const nodemailer = require('nodemailer');
-const { emailConfig } = require('../config/emailConfig');
+const app = express();
 
-const transporter = nodemailer.createTransport(emailConfig);
+// Configuración del transporte de Nodemailer
+const transporter = nodemailer.createTransport({
+  service: 'gmail', // Puedes usar otro servicio como Outlook o SMTP
+  auth: {
+    user: 'monsecastanon023@gmail.com',
+    pass: 'mon140104' // Usa variables de entorno para mayor seguridad
+  }
+});
 
-router.post('/', (req, res) => {
-  const { to, subject, message } = req.body;
-
+// Ruta para enviar el correo
+app.post('/send-email', (req, res) => {
+  const { email, subject, text } = req.body;
+  
   const mailOptions = {
-    from: emailConfig.auth.user,
-    to: to,
+    from: 'monsecastanon043@gmail.com',
+    to: email,
     subject: subject,
-    text: message
+    text: text
   };
 
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
-      console.error('Error al enviar el correo:', error); // Registra el error
-      return res.status(500).send(error.toString());
+      console.log(error);
+      res.status(500).send('Error al enviar el correo');
+    } else {
+      console.log('Correo enviado: ' + info.response);
+      res.status(200).send('Correo enviado con éxito');
     }
-    res.status(200).send('Correo enviado con éxito');
   });
 });
 
-module.exports = router;
+app.listen(3000, () => {
+  console.log('Servidor funcionando en el puerto 3000');
+});

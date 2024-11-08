@@ -21,7 +21,14 @@
       <mat-icon>menu</mat-icon>
     </button>
     <span>Menú </span> <!-- Etiqueta -->
+
+    <!-- Inicia el botón de Facebook -->
     <span class="spacer"></span>
+    <button class="fb mdi mdi-facebook" *ngIf="!loggedIn" (click)="signInWithFB()"> Inicia sesión</button>
+    <div *ngIf="loggedIn">
+      <img src="{{ user.photoUrl }} "><span> {{ user.name }}</span>
+    </div>
+    <!-- Termina Facebook -->
   </mat-toolbar>
   <router-outlet></router-outlet>
 </mat-sidenav-container>

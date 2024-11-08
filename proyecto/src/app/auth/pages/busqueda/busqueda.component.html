@@ -1,0 +1,13 @@
+<p>busqueda works!</p>
+<input [(ngModel)]="termino" placeholder="Buscar en Bing..." />
+    <button (click)="buscar()">Buscar</button>
+
+    <div *ngIf="resultados">
+      <h3>Resultados:</h3>
+      <ul>
+        <li *ngFor="let item of resultados">
+          <a [href]="item.url" target="_blank">{{ item.name }}</a>
+          <p>{{ item.snippet }}</p>
+        </li>
+      </ul>
+    </div>

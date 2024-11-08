@@ -1,3 +1,7 @@
+body {
+  background: linear-gradient(0deg, #ffffff, #8fbce1) fixed; /*Color de fondo de la página*/
+}
+
 .grid {
   display: flex;
   flex-wrap: wrap;
